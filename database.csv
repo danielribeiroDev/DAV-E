@@ -1,0 +1,689 @@
+Description,Type,Softwares,Work instruction,Message,Files,Base Resume,Supplementary Resume,Difficulty level,Resolution,Logs
+"Alteração de acesso do usuário para perfil administrativo.
+", Alteração de Acesso,SISTEMA Y,KB0010536,,,,,1,"1.Acessado o sistema SISTEMA Y.
+2.Navegado até ""Administração"" > ""Controle de Acesso"" > ""Usuário"".
+3.Localizado o usuário João Silva.
+4.Alterado o perfil do usuário para ""Administrador"".
+5.Salvo as alterações.","2024-07-12 09:00 - Acesso ao sistema realizado.
+2024-07-12 09:05 - Usuário João Silva localizado.
+2024-07-12 09:10 - Perfil do usuário alterado para ""Administrador"".
+2024-07-12 09:15 - Alterações salvas e confirmação recebida."
+Remoção de acesso do usuário por término de contrato.,Inativação de Acesso,SISTEMA Y,KB0010536,,,,,1,"1.Acessado o sistema SISTEMA Y.
+2.Navegado até ""Administração"" > ""Controle de Acesso"" > ""Usuário"".
+3.Localizado o usuário Maria Oliveira.
+4.Removido o acesso do usuário.
+5.Salvo as alterações.","2024-07-12 10:00 - Acesso ao sistema realizado.
+2024-07-12 10:05 - Usuário Maria Oliveira localizado.
+2024-07-12 10:10 - Acesso do usuário removido.
+2024-07-12 10:15 - Alterações salvas e confirmação recebida."
+Atualização de acesso do usuário para perfil de leitura.,Alteração de acesso,SISTEMA Y,KB0010536,,,,,1,"1.Acessado o sistema SISTEMA Y.
+2.Navegado até ""Administração"" > ""Controle de Acesso"" > ""Usuário"".
+3.Localizado o usuário Silva.
+4.Alterado o perfil do usuário para ""Leitura"".
+5.Salvo as alterações.","2024-07-12 11:00 - Acesso ao sistema realizado.
+2024-07-12 11:05 - Usuário Pedro Silva localizado.
+2024-07-12 11:10 - Perfil do usuário alterado para ""Leitura"".
+2024-07-12 11:15 - Alterações salvas e confirmação recebida."
+"Atribuição de perfil de acesso administrativo para novo colaborador.
+", Atribuição de Acesso,SISTEMA Y,KB0010544,,,,,1,"1. Recebido chamado com autorização gerencial anexa.
+2. Acessado o sistema SISTEMA Y.
+3. Navegado até ""Users"" e localizado o usuário Rafael Souza.
+4. Atribuído grupo de acesso ""Admin"" e perfil ""Administrador"".
+5. Marcado checkbox ""Password Required"".
+6.  Selecionado ""Pro"" em Default User Interface.
+7. Deixado marcado somente ""Pro                                 8. Interfaces"" em Allowed Interfaces.
+9. Salvo as alterações.","2024-07-12 14:00 - Acesso ao sistema realizado.
+2024-07-12 14:05 - Usuário Rafael Souza localizado.
+2024-07-12 14:15 - Perfil e grupo de acesso alterados para ""Admin/Administrador"".
+2024-07-12 14:20 - Alterações salvas e confirmação recebida."
+Atualização de perfil de acesso para colaborador em férias.,Alteração de acesso,SISTEMA Y,KB0010544,,,,,1,"1. Recebido chamado com autorização gerencial anexa.
+2. Acessado o sistema SISTEMA Y.
+3. Navegado até ""Users"" e localizado o usuário Clara Martins.
+4. Alterado status do usuário para ""Inativo"".
+5. Salvo as alterações.","2024-07-12 15:00 - Acesso ao sistema realizado.
+2024-07-12 15:05 - Usuário Clara Martins localizado.
+2024-07-12 15:10 - Status do usuário alterado para ""Inativo"".
+2024-07-12 15:15 - Alterações salvas e confirmação recebida."
+"Reativação de acesso para colaborador retornando de férias.
+",Reativação de acesso,SISTEMA Y,KB0010544,,,,,1,"1. Recebido chamado com autorização gerencial anexa.
+2. Acessado o sistema SISTEMA Y.
+3. Navegado até ""Users"" e localizado o usuário Lucas Pereira.
+4. Alterado status do usuário para ""Ativo"".
+5. Marcado checkbox ""Password Required"".
+6. Selecionado ""Pro"" em Default User Interface.
+7. Deixado marcado somente ""Pro Interfaces"" em Allowed Interfaces.
+8. Salvo as alterações.","2024-07-12 16:00 - Acesso ao sistema realizado.
+2024-07-12 16:05 - Usuário Lucas Pereira localizado.
+2024-07-12 16:15 - Status do usuário alterado para ""Ativo"".
+2024-07-12 16:20 - Alterações salvas e confirmação recebida."
+Atribuição de acesso ao módulo financeiro para o grupo Contabilidade.,Atribuição de Acesso (Grupo),SISTEMA Y,KB0010579,,,,,1,"1. Recebido chamado com autorização gerencial anexa.
+2. Acessado o sistema SISTEMA Y via Citrix.
+3. Navegado até ""Sistemas"" > ""SISTEMA Y"".
+4. Selecionado ""Configurar Segurança"".
+5. Logado com ""Login"" e ""Password"".
+6. Navegado até ""Profiles"", marcado ""Groups"", localizado o grupo Contabilidade.
+7. Arrastado a aplicação Financeiro até o grupo Contabilidade e clicado em ""Yes"" e ""Save"".","2024-07-12 10:00 - Acesso ao sistema realizado.
+2024-07-12 10:05 - Grupo Contabilidade localizado.
+2024-07-12 10:10 - Aplicação Financeiro atribuída ao grupo.
+2024-07-12 10:15 - Alterações salvas e confirmação recebida."
+Alteração de acesso do usuário João Silva para o módulo de Compliance.,Alteração de Acesso (Usuário),SISTEMA Y,KB0010579,,,,,1,"1. Recebido chamado com autorização gerencial anexa.
+2. Acessado o sistema SISTEMA Y via Citrix.
+3. Navegado até ""Sistemas"" > ""SISTEMA Y"".
+4. Selecionado ""Configurar Segurança"".
+5. Logado com ""Login"" e ""Password"".
+6. Navegado até ""Profiles"", marcado ""User"", localizado o usuário João Silva.
+7. Arrastado a aplicação Compliance até o usuário João Silva e clicado em ""Yes"" e ""Save"".","2024-07-12 11:00 - Acesso ao sistema realizado.
+2024-07-12 11:05 - Usuário João Silva localizado.
+2024-07-12 11:10 - Aplicação Compliance atribuída ao usuário.
+2024-07-12 11:15 - Alterações salvas e confirmação recebida."
+Remoção de acesso do módulo TI para o grupo Fiscal Estadual.,Remoção de acesso (grupo),SISTEMA Y,KB0010579,,,,,2,"1. Recebido chamado com autorização gerencial anexa.
+2. Acessado o sistema SISTEMA Y via Citrix.
+3. Navegado até ""Sistemas"" > ""SISTEMA Y"".
+4. Selecionado ""Configurar Segurança"".
+5. Logado com ""Login"" e ""Password"".
+6. Navegado até ""Profiles"", marcado ""Groups"", localizado o grupo Fiscal Estadual.
+7. Removido a aplicação TI do grupo Fiscal Estadual e clicado em ""Yes"" e ""Save"".","2024-07-12 12:00 - Acesso ao sistema realizado.
+2024-07-12 12:05 - Grupo Fiscal Estadual localizado.
+2024-07-12 12:10 - Aplicação TI removida do grupo.
+2024-07-12 12:15 - Alterações salvas e confirmação recebida."
+Cadastro de novo usuário no ambiente PRD.,Cadastro de usuário,SISTEMA Y,,,,,,1,"1. Recebido chamado com autorização do Gerente de PRD anexa.
+2. Acessado o sistema SISTEMA Y via navegador.
+3. Navegado até a página de login e autenticado com credenciais de Gestão de Acessos.
+4. Clicado em ""Novo Usuário"".
+5. Preenchido dados: João da Silva, CPF, RG, Login de rede, Perfil Financeiro.
+6. Selecionado ambiente PRD.
+Clicado em ""Cadastrar Usuários"".
+7. Mensagem de confirmação de cadastro recebida.
+8. Informado o usuário sobre a finalização do cadastro e senha provisória.
+","2024-07-12 14:00 - Acesso ao sistema realizado.
+2024-07-12 14:05 - Dados do usuário João da Silva preenchidos.
+2024-07-12 14:10 - Ambiente PRD selecionado.
+2024-07-12 14:15 - Cadastro finalizado e confirmação recebida."
+Alteração de cadastro de usuário para ambiente QA.,Alteração de Cadastro,SISTEMA Y,,,,,,1,"1. Recebido chamado com autorização anexa.
+2. Acessado o sistema SISTEMA Y via navegador.
+3. Navegado até a página de login e autenticado com credenciais de Gestão de Acessos.
+4. Clicado em ""Atualizar Informação"".
+5. Selecionado usuário Maria Oliveira.
+6. Alterado ambiente de DEV para QA.
+7. Clicado em ""Confirmar"".","2024-07-12 15:00 - Acesso ao sistema realizado.
+2024-07-12 15:05 - Usuário Maria Oliveira selecionado.
+2024-07-12 15:10 - Ambiente alterado para QA.
+2024-07-12 15:15 - Alteração finalizada e confirmação recebida."
+Cadastro de novo usuário no ambiente DEV.,Cadastro de Usuário,SISTEMA Y,,,,,,1,"1. Recebido chamado com autorização de Controles Internos anexa.
+2. Acessado o sistema SISTEMA Y via navegador.
+3. Navegado até a página de login e autenticado com credenciais de Gestão de Acessos.
+4. Clicado em ""Novo Usuário"".
+5. Preenchido dados: Pedro Costa, CPF, RG, Login de rede, Perfil Desenvolvedor.
+6. Selecionado ambiente DEV.
+7. Clicado em ""Cadastrar Usuários"".
+8. Mensagem de confirmação de cadastro recebida.
+9. Informado o usuário sobre a finalização do cadastro e senha provisória.","2024-07-12 16:00 - Acesso ao sistema realizado.
+2024-07-12 16:05 - Dados do usuário Pedro Costa preenchidos.
+2024-07-12 16:10 - Ambiente DEV selecionado.
+2024-07-12 16:15 - Cadastro finalizado e confirmação recebida."
+Reset de senha no ambiente de Produção do SAP Portal.,Reset de Senha,SAP Portal,,,,,,1,"1. Recebido chamado do usuário com autorização do gestor imediato.
+2. Acessado o ambiente de Produção do SAP Portal via endereço https://xxxxxxxxxxxxxxxxxxxxxx.
+3. Realizado logon com usuário administrativo.
+4. Navegado até a aba ""Administração de Usuário"".
+5. Informado o usuário ""joao.silva"" e clicado em ""Modificar"".
+6. Na aba ""Informações Gerais"", alterado a senha nos campos ""Definir Senha"" e ""Confirmar Senha"".
+7. Clicado em ""Gravar"" para salvar a alteração.","2024-07-12 10:00 - Chamado recebido.
+2024-07-12 10:05 - Logon realizado no SAP Portal.
+2024-07-12 10:10 - Usuário ""joao.silva"" modificado.
+2024-07-12 10:15 - Senha alterada e salva."
+Reset de senha no ambiente de Desenvolvimento do SAP Portal.,Reset de Senha,SAP Portal,,,,,,1,"1. Recebido chamado do próprio usuário.
+2. Acessado o ambiente de Desenvolvimento do SAP Portal via endereço https://xxxxxxxxxxxxxxxxxxxxxx.
+3. Realizado logon com usuário administrativo.
+4. Navegado até a aba ""Administração de Usuário"".
+5. Informado o usuário ""maria.souza"" e clicado em ""Modificar"".
+6. Na aba ""Informações Gerais"", alterado a senha nos campos ""Definir Senha"" e ""Confirmar Senha"".
+7. Clicado em ""Gravar"" para salvar a alteração.","2024-07-12 11:00 - Chamado recebido.
+2024-07-12 11:05 - Logon realizado no SAP Portal.
+2024-07-12 11:10 - Usuário ""maria.souza"" modificado.
+2024-07-12 11:15 - Senha alterada e salva."
+Reset de senha no ambiente de Qualidade do SAP Portal.,Reset de Senha,SAP Portal,,,,,,1,"1. Recebido chamado do usuário com autorização do gestor imediato.
+2. Acessado o ambiente de Qualidade do SAP Portal via endereço https://xxxxxxxxxxxxxxxxxxxxxx.
+3. Realizado logon com usuário administrativo.
+4. Navegado até a aba ""Administração de Usuário"".
+5. Informado o usuário ""pedro.alves"" e clicado em ""Modificar"".
+6. Na aba ""Informações Gerais"", alterado a senha nos campos ""Definir Senha"" e ""Confirmar Senha"".
+7. Clicado em ""Gravar"" para salvar a alteração.","024-07-12 12:00 - Chamado recebido.
+2024-07-12 12:05 - Logon realizado no SAP Portal.
+2024-07-12 12:10 - Usuário ""pedro.alves"" modificado.
+2024-07-12 12:15 - Senha alterada e salva."
+Usuário solicita ativação de conta no SAP.,Ativação de conta,SAP,,,,,,2,"1. Verificar se o usuário possui número de identidade ou CPF.
+2. Abrir o SAP Logon e acessar o ambiente “02) SAP ERP Produção”.
+3. Inserir o número de identidade ou CPF do colaborador.
+4. Selecionar a conta e clicar em “Ativar/inativar Conta” (tecla F6).
+5. Verificar se o campo “Status cta” está com o valor “A” para Ativo.
+6. Finalizar a alteração e verificar logs de execução SM49.","2024-07-12 10:00 - Chamado recebido.
+2024-07-12 10:05 - Logon realizado no SAP Portal.
+2024-07-12 10:10 - Usuário ""maria.oliveira"" modificado.
+2024-07-12 10:15 - Conta ativada e salva."
+Usuário não consegue inativar conta do SYSTEMA Y.,Inativação de conta,SAP,,,,,,2,"1. Abrir o SAP Logon e acessar o ambiente “02) SAP ERP Produção”.
+2. Inserir o número de identidade ou CPF do colaborador.
+3. Selecionar a conta e clicar em “Ativar/inativar Conta” (tecla F6).
+4. Verificar se o campo “Status cta” está com o valor “I” para Inativo.
+5. Se a mensagem “0 rows affected” aparecer, procurar pelo funcionário no sistema correspondente.
+6. Excluir e cadastrar a conta novamente, se necessário.","2024-07-12 11:30 - Chamado recebido.
+2024-07-12 11:35 - Logon realizado no SAP Portal.
+2024-07-12 11:40 - Usuário ""carlos.santos"" modificado.
+2024-07-12 11:45 - Tentativa de inativação realizada.
+2024-07-12 11:50 - Conta recadastrada e inativação confirmada"
+Gestor solicita revisão semestral de acessos no sistema SAP.,Revisão de acessos,SAP,,,,,,2,"1. Gerar lista de acessos ativos pelo time de Digital - Acessos.
+2. Validar a lista com o Gestor de Negócio.
+3. Registrar alterações no Sistema de ITSM de Digital em nome do Gestor.
+4. Executar a atualização dos acessos conforme as validações recebidas.
+5. Finalizar o chamado no Sistema de ITSM com status de resolvido.","2024-07-12 14:00 - Chamado recebido.
+2024-07-12 14:05 - Logon realizado no SAP Portal.
+2024-07-12 14:10 - Lista de acessos gerada e validada.
+2024-07-12 14:15 - Atualizações registradas e revisões concluídas."
+Usuário solicita prorrogação de acesso no SAP conforme notificação automática de vencimento.,Prorrogação de acesso,SAP,,,,,,1,"1. Acessar a caixa de e-mail “Suporte” para verificar notificação de prorrogação.
+2. Abrir o SAP e acessar ZBO103 para verificar detalhes do acesso.
+3. Validar e responder ao gestor responsável pela prorrogação.
+4. Atualizar data de desligamento na transação ZBO103 conforme solicitado.
+5. Registrar alterações no ITSM de Digital e finalizar o chamado com status de resolvido.","2024-07-12 09:00 - Chamado recebido.
+2024-07-12 09:05 - Acesso à caixa de e-mail “Suporte”.
+2024-07-12 09:10 - Logon realizado no SAP Portal.
+2024-07-12 09:15 - Prorrogação de acesso realizada conforme orientações.
+2024-07-12 09:20 - Chamado finalizado com status de resolvido."
+Gestor solicita revogação programada de acesso no SAP para data futura.,Revogação de acesso,SAP,,,,,,2,"1. Verificar e validar solicitação de revogação programada no e-mail do gestor.
+2. Acessar ZBO103 e selecionar a flag “Revogação     3. Programada” para bloquear o JOB do SAP até a data fim.
+4. Confirmar a revogação automática para um dia após a data de desligamento.
+5. Registrar alterações no ITSM de Digital e finalizar o chamado com status de resolvido.","2024-07-12 11:00 - Chamado recebido.
+2024-07-12 11:05 - Verificação da solicitação de revogação no e-mail do gestor.
+2024-07-12 11:10 - Logon realizado no SAP Portal.
+2024-07-12 11:15 - Revogação programada confirmada na ZBO103.
+2024-07-12 11:20 - Chamado finalizado com status de resolvido."
+Acesso de terceiro revogado automaticamente pelo JOB do SAP devido à falta de resposta do gestor.,Revogação de acesso,SAP,,,,,,2,"1. Verificar e registrar o e-mail automático de revogação pelo JOB do SAP.
+2. Acessar ZBO104 para confirmar inatividade do acesso no SAP.
+3. Verificar registros automáticos na ZBO127 para confirmar inatividade no AD.
+4. Registrar alterações no ITSM de Digital e finalizar o chamado com status de resolvido.","2024-07-12 13:00 - Chamado recebido.
+2024-07-12 13:05 - Verificação do e-mail automático de revogação.
+2024-07-12 13:10 - Logon realizado no SAP Portal.
+2024-07-12 13:15 - Confirmação de revogação automática na ZBO104 e ZBO127.
+2024-07-12 13:20 - Chamado finalizado com status de resolvido."
+Usuário solicita desbloqueio de acesso no sistema SAP.,Desbloqueio de acesso,SAP Solution Manager,,,,,,1,"1. Acessar o SAP Solution Manager no ambiente 06).
+2. Digitar a transação “SU01” e pressionar Enter.
+3. Buscar o nome completo do usuário usando o matchcode.
+4. Selecionar o usuário e clicar em “Desbloquear”.
+5. Registrar o número do chamado e salvar a alteração.","2024-07-12 09:00 - Chamado recebido.
+2024-07-12 09:05 - Logon realizado no SAP Solution Manager.
+2024-07-12 09:10 - Usuário ""ana.silva"" desbloqueado no SAP.
+2024-07-12 09:15 - Chamado finalizado com status de resolvido."
+Usuário solicita desbloqueio de acesso no SAP Portal no ambiente de produção.,Desbloqueio de acesso,SAP Portal,,,,,,1,"1. Acessar o SAP Portal no ambiente de produção através do link fornecido.
+2. Selecionar a aba “Administração de Usuário”.
+3. Buscar e selecionar o usuário desejado.
+4. Na aba “Informações sobre a conta”, desmarcar o campo “Senha bloqueada” e salvar.","2024-07-12 11:00 - Chamado recebido.
+2024-07-12 11:05 - Logon realizado no SAP Portal - Ambiente de Produção.
+2024-07-12 11:10 - Usuário ""joao.pereira"" desbloqueado no SAP Portal.
+2024-07-12 11:15 - Chamado finalizado com status de resolvido."
+Usuário solicita desbloqueio de acesso no SAP Portal no ambiente de qualidade.,Desbloqueio de acesso,SAP Portal,,,,,,2,"1. Acessar o SAP Portal no ambiente de qualidade através do link fornecido.
+2. Selecionar a aba “Administração de Usuário”.
+3. Buscar e selecionar o usuário desejado.
+4. Na aba “Informações sobre a conta”, desmarcar o campo “Senha bloqueada” e salvar.","2024-07-12 13:00 - Chamado recebido.
+2024-07-12 13:05 - Logon realizado no SAP Portal - Ambiente de Qualidade.
+2024-07-12 13:10 - Usuário ""marcio.santos"" desbloqueado no SAP Portal.
+2024-07-12 13:15 - Chamado finalizado com status de resolvido."
+Usuário solicita a criação de um novo perfil no SISTEMA Y para acesso ao ambiente de Desenvolvimento,Criação de perfil,SISTEMA Y,KB0012187,,,,,2,"1. Acessar o browser conforme o ambiente solicitado (Desenvolvimento).
+2. Informar o e-mail corporativo e avançar.
+3. Navegar para ""Configurações"" > ""Segurança"".
+4. Selecionar ""Direitos de Acesso"" e clicar em ""Novo"".
+5. Preencher o campo ""Nome da Função"" com o valor solicitado nos pré-requisitos.
+6. No campo ""Unidade de Negócio"", selecionar ""GESTAO_AMBIENTE"".
+7. Configurar as permissões de acesso conforme especificado nos pré-requisitos para cada entidade.
+Salvar e fechar as configurações.","2024-07-12 14:00 - Chamado recebido para criação de perfil no SISTEMA Y.
+2024-07-12 14:05 - Navegação realizada no ambiente de Desenvolvimento.
+2024-07-12 14:10 - Novo perfil ""Analista_Ambiente"" criado com permissões definidas.
+2024-07-12 14:15 - Chamado finalizado com status de resolvido."
+Usuário solicita alteração no perfil do grupo específico no SISTEMA Y para adicionar permissões adicionais.,Alteração de perfil,SISTEMA Y,KB0012474,,,,,1,"1. Acessar o sistema pelo navegador Internet Explorer utilizando o endereço fornecido.
+2. Inserir o login e senha corporativos para autenticação.
+3. Navegar até a aba ""Segurança"" e selecionar ""Grupos de Usuários"".
+4. No menu de ações do item, escolher ""Gerenciar Permissões"".
+5. Selecionar o grupo a ser modificado e clicar em ""Novo"" para adicionar novas permissões.
+6. Preencher o campo ""Nome da Função"" conforme especificado nos pré-requisitos.
+7. Configurar as permissões necessárias para cada funcionalidade listada na Tabela 10, conforme requerido.
+8. Após configurar todas as permissões desejadas:
+8-1.Clicar em ""Salvar"" para aplicar as permissões ao grupo em uso.
+8-2.Ou clicar em ""Cancelar"" para abortar a operação sem salvar alterações.","2024-07-12 14:00 - Recebido chamado para alteração de perfil no SISTEMA Y.
+2024-07-12 14:05 - Acesso ao sistema efetuado utilizando o Internet Explorer.
+2024-07-12 14:10 - Permissões adicionais configuradas para o grupo ""Grupo_XYZ"".
+2024-07-12 14:15 - Chamado encerrado com sucesso após aplicação das alterações."
+Usuário solicita a inativação do acesso de um usuário específico no SISTEMA Y devido a desligamento ou outra razão válida.,"Inativação de acesso de usuário
+PARTE 1",SISTEMA Y,KB0012483,,,,,1,"Central de Serviços - CS:
+
+1. Verificar se o e-mail padrão está anexado ao chamado com a aprovação do Gerente Executivo, caso a inativação não seja devido a desligamento.
+2. Se todos os pré-requisitos estiverem preenchidos, classificar o chamado como ""Inativação de Acesso a 3. Usuário no SISTEMA Y"" e encaminhar para o grupo solucionador N1 - ACESSOS.
+4. Caso algum pré-requisito esteja faltando, cancelar o chamado informando a necessidade de seguir as orientações da planilha Template Solicitação de Serviços SYSTEMA Y.","2024-07-12 15:00 - Recebido chamado para inativação de acesso de usuário no SISTEMA Y.
+2024-07-12 15:05 - Verificação dos pré-requisitos realizada pela Central de Serviços.
+2024-07-12 15:10 - Inativação de acesso executada pelo grupo N1 - ACESSOS.
+2024-07-12 15:15 - Chamado encerrado após confirmação da inativação e liberação das licenças."
+Usuário solicita a inativação do acesso de um usuário específico no SISTEMA Y devido a desligamento ou outra razão válida.,"Inativação de acesso ao usuário
+PARTE 2",SISTEMA Y,KB0012483,,,,,2,"Gestão de Acessos - N1 - ACESSOS:
+
+1. Acessar o Módulo QEF do SISTEMA Y utilizando o link fornecido para autenticação com Windows Authentication.
+
+2. Navegar até a seção ""Users and Groups"" na guia SECTIONS.
+
+3. Selecionar ""Users"" e filtrar o usuário específico a ser inativado.
+
+4. Clicar em ""Member Of"" e remover o usuário dos grupos vinculados, exceto ""All Users"".
+
+5. Confirmar a inativação do usuário clicando em ""OK"" no pop-up de confirmação.
+","2024-07-12 15:00 - Recebido chamado para inativação de acesso de usuário no SISTEMA Y.
+2024-07-12 15:05 - Verificação dos pré-requisitos realizada pela Central de Serviços.
+2024-07-12 15:10 - Inativação de acesso executada pelo grupo N1 - ACESSOS.
+2024-07-12 15:15 - Chamado encerrado após confirmação da inativação e liberação das licenças."
+Usuário solicita a inativação do acesso de um usuário específico no SISTEMA Y devido a desligamento ou outra razão válida.,"Inativação de acesso de usuário
+PARTE 3",SISTEMA Y,KB0012483,,,,,2,"Para inativação de licenças:
+
+Selecionar a seção ""Licenses"" na guia SECTIONS.
+Escolher a(s) licença(s) correspondente(s) ao(s) acesso(s) a serem inativados.
+Clicar no botão de atualização (refresh) e confirmar a atualização da licença clicando em ""OK"" no pop-up.
+Abrir o Anexo II - Controle de Licenças do SISTEMA Y e liberar a(s) licença(s) na coluna ""Em Uso do Gerente Executivo"" para cada tipo de licença inativada.
+
+Alterar o status do acesso do usuário na ZBO104 para ""Inativo"".
+
+Concluir o chamado de inativação de acesso.","2024-07-12 15:00 - Recebido chamado para inativação de acesso de usuário no SISTEMA Y.
+2024-07-12 15:05 - Verificação dos pré-requisitos realizada pela Central de Serviços.
+2024-07-12 15:10 - Inativação de acesso executada pelo grupo N1 - ACESSOS.
+2024-07-12 15:15 - Chamado encerrado após confirmação da inativação e liberação das licenças."
+Usuário solicita a alteração do perfil de acesso de um colaborador no SISTEMA Y.,"Alteração de perfil de usuário
+Parte 1",SISTEMA Y,KB0027989,,,,,1,"Central de Serviços - CS:
+
+1. Coletar as seguintes informações do colaborador:
+Nome completo
+Usuário de acesso ao sistema
+Ambiente desejado para a alteração (QAS ou PRD)
+Motivo da alteração de perfil
+Grupo de acesso ou usuário cópia para referência
+Autorização do gerente imediato do colaborador
+2. Abrir um chamado de alteração de perfil no sistema de ITSM de Digital, designando-o para o grupo de atendimento N1-ACESSOS.","2024-07-12 16:00 - Recebido chamado para alteração de perfil de usuário no SISTEMA Y.
+2024-07-12 16:05 - Verificação dos pré-requisitos e autorizações realizada pela Central de Serviços.
+2024-07-12 16:10 - Alteração de perfil executada pelo grupo N1-ACESSOS.
+2024-07-12 16:15 - Chamado encerrado após confirmação da alteração e notificação ao solicitante."
+Usuário solicita a alteração do perfil de acesso de um colaborador no SISTEMA Y.,"Alteração de perfil de usuário
+Parte 2",SISTEMA Y,KB0027989,,,,,1,"Gestão de Acessos - N1-ACESSOS:
+
+1. Acessar o sistema via Internet Explorer usando o endereço do ambiente de DESENVOLVIMENTO ou PRODUÇÃO.
+2. Realizar login com usuário e senha de ADMINISTRADOR para acesso ao sistema.
+3. Navegar para as configurações do sistema clicando em ""Configurações"".
+4. Selecionar a opção ""Usuários"".
+5. Localizar e clicar sobre o usuário específico que requer a alteração de perfil.
+6. Especificar o novo tipo de perfil conforme as opções disponíveis no sistema.
+7. Salvar as alterações realizadas.","2024-07-12 16:00 - Recebido chamado para alteração de perfil de usuário no SISTEMA Y.
+2024-07-12 16:05 - Verificação dos pré-requisitos e autorizações realizada pela Central de Serviços.
+2024-07-12 16:10 - Alteração de perfil executada pelo grupo N1-ACESSOS.
+2024-07-12 16:15 - Chamado encerrado após confirmação da alteração e notificação ao solicitante."
+Criação de novo usuário para o departamento de Recursos Humanos.,Solicitação de novo usuário,SISTEMA Y,KB0040242,,,,,1,"1. Recebemos uma solicitação aprovada pelo gestor da área de Recursos Humanos para a criação de um novo usuário no SISTEMA Y.
+2. Acessamos o SISTEMA Y pelo ícone de atalho na área de trabalho.
+3. Inserimos o login e a senha para acessar o sistema.
+4. Na tela inicial, clicamos em “Usuários”.
+5. Na tela “Cadastro de Usuários”, clicamos em “Incluir”.
+6. Preenchemos os campos obrigatórios com as informações fornecidas: Login, Senha, Confirmação de Senha, Nome, E-mail, Perfil e Bloqueado.
+7. Salvamos os dados do novo usuário.","2024-07-15 10:00 - Solicitação de criação de novo usuário recebida e aprovada pelo gestor.
+2024-07-15 10:05 - Acesso ao SISTEMA Y realizado.
+2024-07-15 10:10 - Navegação até a tela “Cadastro de Usuários”.
+2024-07-15 10:15 - Informações do novo usuário preenchidas.
+2024-07-15 10:20 - Dados do novo usuário salvos.
+2024-07-15 10:25 - Chamado finalizado com status de resolvido."
+Revisão semestral de acessos e inativação de usuários inativos.,Revisão de acessos,SISTEMA Y,KB0040242,,,,,2,"1. Recebemos a lista de acessos ativos do time de Digital - Acessos.
+2. O Gestor de Negócio validou a lista e indicou quais acessos deveriam ser inativados.
+3. Registramos as alterações necessárias no Sistema de ITSM de Digital.
+4. Atualizamos as informações de acessos no SISTEMA Y, inativando os usuários indicados.
+5. Finalizamos o chamado com status de resolvido.","2024-07-15 11:00 - Lista de acessos ativos recebida do time de Digital - Acessos.
+2024-07-15 11:10 - Validação da lista realizada pelo Gestor de Negócio.
+2024-07-15 11:20 - Registro das alterações no Sistema de ITSM de Digital.
+2024-07-15 11:30 - Atualização dos acessos no SISTEMA Y concluída.
+2024-07-15 11:40 - Chamado finalizado com status de resolvido."
+Criação de usuário administrador para o time de TI.,Solicitação de novo usuário,SISTEMA Y,KB0040242,,,,,1,"1. Recebemos uma solicitação aprovada pelo gestor da área de TI para a criação de um usuário administrador no SISTEMA Y.
+2. Acessamos o SISTEMA Y pelo ícone de atalho na área de trabalho.
+3. Inserimos o login e a senha para acessar o sistema.
+4. Na tela inicial, clicamos em “Usuários”.
+5. Na tela “Cadastro de Usuários”, clicamos em “Incluir”.
+6. Preenchemos os campos obrigatórios com as informações fornecidas: Login, Senha, Confirmação de Senha, Nome, E-mail, Perfil (Administrador-Administrador) e Bloqueado.
+7. Salvamos os dados do novo usuário.","2024-07-15 12:00 - Solicitação de criação de novo usuário administrador recebida e aprovada pelo gestor.
+2024-07-15 12:05 - Acesso ao SISTEMA Y realizado.
+2024-07-15 12:10 - Navegação até a tela “Cadastro de Usuários”.
+2024-07-15 12:15 - Informações do novo usuário preenchidas.
+2024-07-15 12:20 - Dados do novo usuário salvos.
+2024-07-15 12:25 - Chamado finalizado com status de resolvido."
+Inativação de acesso para colaborador da categoria Terceiro,Inativação de usuário,SAP Logon,KB0040416,,,,,2,"1. Recebemos o e-mail autorizando a revogação de acesso para um colaborador da categoria Terceiro.
+2. Acessamos o SAP Logon e selecionamos o sistema “02) SAP ERP Produção”.
+3. Realizamos o logon no sistema com usuário e senha.
+4. Utilizamos a transação “ZBO127” para buscar o usuário pelo número de identidade.
+5. Confirmamos a identidade do usuário e procedemos com a inativação.
+6. Inserimos a data de desligamento e o motivo, e salvamos as alterações.","2024-07-15 13:00 - E-mail autorizando a revogação de acesso recebido.
+2024-07-15 13:05 - Acesso ao SAP Logon realizado.
+2024-07-15 13:10 - Navegação até a transação “ZBO127”.
+2024-07-15 13:15 - Identidade do usuário confirmada.
+2024-07-15 13:20 - Usuário inativado.
+2024-07-15 13:25 - Data de desligamento e motivo inseridos.
+2024-07-15 13:30 - Chamado finalizado com status de resolvido."
+Inativação de usuário a pedido do RH para um funcionário desligado.,Inativação de usuário,SAP ERP Produção,KB0040416,,,,,1,"1. Recebemos o e-mail do RH solicitando a revogação de acesso para um funcionário desligado.
+2. Acessamos o SAP Logon e selecionamos o sistema “02) SAP ERP Produção”.
+3. Realizamos o logon no sistema com usuário e senha.
+4. Utilizamos a transação “ZBO127” para buscar o usuário pelo nome.
+5. Confirmamos a identidade do usuário e procedemos com a inativação.
+6. Inserimos a data de desligamento e o motivo, e salvamos as alterações.","2024-07-15 14:00 - E-mail do RH solicitando a revogação de acesso recebido.
+2024-07-15 14:05 - Acesso ao SAP Logon realizado.
+2024-07-15 14:10 - Navegação até a transação “ZBO127”.
+2024-07-15 14:15 - Identidade do usuário confirmada.
+2024-07-15 14:20 - Usuário inativado.
+2024-07-15 14:25 - Data de desligamento e motivo inseridos.
+2024-07-15 14:30 - Chamado finalizado com status de resolvido."
+Revisão semestral de acessos e inativação de usuários inativos.,Revisão de acessos,SAP Logon,KB0040416,,,,,2,"1. Recebemos a lista de acessos ativos do time de Digital - Acessos.
+2. O Gestor de Negócio validou a lista e indicou quais acessos deveriam ser inativados.
+3. Registramos as alterações necessárias no Sistema de ITSM de Digital.
+4. Acessamos o SAP Logon e selecionamos o sistema “02) SAP ERP Produção”.
+5. Utilizamos a transação “ZBO127” para buscar e inativar os usuários indicados.
+6. Inserimos as datas de desligamento e os motivos, e salvamos as alterações.","2024-07-15 15:00 - Lista de acessos ativos recebida do time de Digital - Acessos.
+2024-07-15 15:10 - Validação da lista realizada pelo Gestor de Negócio.
+2024-07-15 15:20 - Registro das alterações no Sistema de ITSM de Digital.
+2024-07-15 15:25 - Acesso ao SAP Logon realizado.
+2024-07-15 15:30 - Navegação até a transação “ZBO127”.
+2024-07-15 15:35 - Identidades dos usuários confirmadas.
+2024-07-15 15:40 - Usuários inativados.
+2024-07-15 15:45 - Datas de desligamento e motivos inseridos.
+2024-07-15 15:50 - Chamado finalizado com status de resolvido."
+Criação de novo usuário para o departamento de Administração com acesso ao módulo ECF.,Solicitação de novo usuário,SISTEMA Y,KB0041208,,,,,1,"1. Recebemos uma solicitação aprovada pelo Gerente de Compliance Fiscal para a criação de um novo usuário no SISTEMA Y com acesso ao módulo ECF.
+2. Acessamos o sistema via Internet Explorer utilizando o endereço HTTPS://XXXXXX no ambiente de DESENVOLVIMENTO.
+3. Fizemos o logon utilizando o usuário e senha de acesso.
+4. Clicamos em “Administração” e acessamos o menu Segurança > Usuário.
+5. Criamos um novo usuário, preenchendo os campos obrigatórios: Nome, Usuário, E-Mail, Atributos, Status, Localidade, Profile de Segurança, Tipo do Usuário.
+6. Salvamos o cadastro e redefinimos a chave de segurança.","2024-07-15 09:00 - Solicitação de criação de novo usuário recebida e aprovada pelo Gerente de Compliance Fiscal.
+2024-07-15 09:05 - Acesso ao sistema via Internet Explorer realizado.
+2024-07-15 09:10 - Navegação até o menu Segurança > Usuário.
+2024-07-15 09:15 - Preenchimento dos campos do novo usuário.
+2024-07-15 09:20 - Cadastro do novo usuário salvo.
+2024-07-15 09:25 - Chave de segurança redefinida.
+2024-07-15 09:30 - Chamado finalizado com status de resolvido."
+Criação de usuário para o departamento de TI com acesso ao módulo Administração.,Solicitação de novo usuário,SISTEMA Y,KB0041208,,,,,1,"1. Recebemos uma solicitação aprovada pelo Gerente de Compliance Fiscal para a criação de um usuário no SISTEMA Y com acesso ao módulo Administração.
+2. Acessamos o sistema via Internet Explorer utilizando o endereço HTTPS://XXXXXX no ambiente de DESENVOLVIMENTO.
+3. Fizemos o logon utilizando o usuário e senha de acesso.
+4. Clicamos em “Administração” e acessamos o menu Segurança > Usuário.
+5. Criamos um novo usuário, preenchendo os campos obrigatórios: Nome, Usuário, E-Mail, Atributos, Status, Localidade, Profile de Segurança, Tipo do Usuário.
+6. Salvamos o cadastro e redefinimos a chave de segurança.","2024-07-15 10:00 - Solicitação de criação de novo usuário recebida e aprovada pelo Gerente de Compliance Fiscal.
+2024-07-15 10:05 - Acesso ao sistema via Internet Explorer realizado.
+2024-07-15 10:10 - Navegação até o menu Segurança > Usuário.
+2024-07-15 10:15 - Preenchimento dos campos do novo usuário.
+2024-07-15 10:20 - Cadastro do novo usuário salvo.
+2024-07-15 10:25 - Chave de segurança redefinida.
+2024-07-15 10:30 - Chamado finalizado com status de resolvido."
+Liberação de acesso ao SYSTEMA Y para um novo colaborador com licença E5.,Solicitação de liberação de acesso,Azure Virtual Desktop (AVD),KB0051001,,,,,1,"1. Recebemos a aprovação do Gerente responsável com CDC para a liberação de acesso ao SYSTEMA Y.
+2. Validamos se o colaborador possui uma licença E5 publicada no Active Directory.
+3. Incluímos o usuário no grupo de liberação da ferramenta Azure Virtual Desktop (AVD) “G-XXXXXX- SYSTEMA Y”.
+4. Orientamos o colaborador sobre os métodos de acesso recomendados: Cliente Área de Trabalho do Windows, Cliente Microsoft Store, Cliente para área de trabalho MacOS, e Cliente WEB.","2024-07-15 13:00 - Solicitação de liberação de acesso recebida e aprovada pelo Gerente responsável com CDC.
+2024-07-15 13:05 - Validação de licença E5 realizada no Active Directory.
+2024-07-15 13:10 - Usuário incluído no grupo “G-XXXXXX- SYSTEMA Y” no AVD.
+2024-07-15 13:15 - Orientação sobre métodos de acesso fornecida ao colaborador.
+2024-07-15 13:20 - Chamado finalizado com status de resolvido."
+Liberação de acesso ao SYSTEMA Y para um colaborador existente que necessita de acesso adicional.,Solicitação de liberação de acesso,Azure Virtual Desktop (AVD),KB0051001,,,,,2,"1. Recebemos a aprovação do Gerente responsável com CDC para a liberação de acesso adicional ao SYSTEMA Y.
+2. Validamos se o colaborador possui uma licença E5 publicada no Active Directory.
+3. Incluímos o usuário no grupo de liberação da ferramenta Azure Virtual Desktop (AVD) “G-XXXXXX- SYSTEMA Y”.
+4. Orientamos o colaborador sobre os métodos de acesso recomendados: Cliente Área de Trabalho do Windows, Cliente Microsoft Store, Cliente para área de trabalho MacOS, e Cliente WEB.","2024-07-15 14:00 - Solicitação de liberação de acesso recebida e aprovada pelo Gerente responsável com CDC.
+2024-07-15 14:05 - Validação de licença E5 realizada no Active Directory.
+2024-07-15 14:10 - Usuário incluído no grupo “G-XXXXXX- SYSTEMA Y” no AVD.
+2024-07-15 14:15 - Orientação sobre métodos de acesso fornecida ao colaborador.
+2024-07-15 14:20 - Chamado finalizado com status de resolvido."
+Liberação de acesso ao SYSTEMA Y para um colaborador temporário.,Solicitação de liberação de acesso,Azure Virtual Desktop,KB0051001,,,,,2,"1. Recebemos a aprovação do Gerente responsável com CDC para a liberação de acesso ao SYSTEMA Y para um colaborador temporário.
+2. Validamos se o colaborador possui uma licença E5 publicada no Active Directory.
+3. Incluímos o usuário no grupo de liberação da ferramenta Azure Virtual Desktop (AVD) “G-XXXXXX- SYSTEMA Y”.
+4. Orientamos o colaborador sobre os métodos de acesso recomendados: Cliente Área de Trabalho do Windows, Cliente Microsoft Store, Cliente para área de trabalho MacOS, e Cliente WEB.","2024-07-15 15:00 - Solicitação de liberação de acesso recebida e aprovada pelo Gerente responsável com CDC.
+2024-07-15 15:05 - Validação de licença E5 realizada no Active Directory.
+2024-07-15 15:10 - Usuário incluído no grupo “G-XXXXXX- SYSTEMA Y” no AVD.
+2024-07-15 15:15 - Orientação sobre métodos de acesso fornecida ao colaborador.
+2024-07-15 15:20 - Chamado finalizado com status de resolvido."
+Ativação de acesso no SYSTEMA Y para um novo colaborador.,Ativação de acesso,SYSTEMA Y,KB0053251,,,,,1,"1. Recebemos a solicitação de ativação com o nome do colaborador e o usuário do SYSTEMA Y.
+2. Confirmamos o aval do keyuser xxxxxx.
+3. Acessamos o SYSTEMA Y, selecionamos a opção ""Manage Users"" e realizamos o login no sistema de help desk.
+4. Localizamos o usuário na página de gerenciamento, clicamos em ""Edit User"" e marcamos o parâmetro ""Enabled"" para ativar o usuário.","2024-07-15 10:00 - Solicitação de ativação de acesso recebida.
+2024-07-15 10:05 - Aval do keyuser xxxxxx confirmado.
+2024-07-15 10:10 - Logon realizado no sistema de help desk do SYSTEMA Y.
+2024-07-15 10:15 - Usuário localizado e ativado.
+2024-07-15 10:20 - Chamado finalizado com status de resolvido."
+Inativação de acesso no SYSTEMA Y para um colaborador desligado.,Inativação de acesso,SYSTEMA Y,KB0053251,,,,,1,"1. Recebemos a solicitação de inativação com o nome do colaborador, usuário do SYSTEMA Y, e o motivo da inativação.
+2. Confirmamos o aval do keyuser XXXXXXXXX.
+3. Acessamos o SYSTEMA Y, selecionamos a opção ""Manage Users"" e realizamos o login no sistema de help desk.
+4. Localizamos o usuário na página de gerenciamento, clicamos em ""Edit User"" e desmarcamos o parâmetro ""Enabled"" para inativar o usuário.","2024-07-15 11:00 - Solicitação de inativação de acesso recebida.
+2024-07-15 11:05 - Aval do keyuser XXXXXXXXX confirmado.
+2024-07-15 11:10 - Logon realizado no sistema de help desk do SYSTEMA Y.
+2024-07-15 11:15 - Usuário localizado e inativado.
+2024-07-15 11:20 - Chamado finalizado com status de resolvido."
+Transferência de licença no SYSTEMA Y de um colaborador desligado para um novo colaborador.,Transferência de licença,SYSTEMA Y,KB0053251,,,,,1,"1. Recebemos a solicitação de transferência de licença com os nomes dos colaboradores e os usuários do SYSTEMA Y.
+2. Confirmamos o aval do keyuser XXXXXX.
+3. Acessamos o SYSTEMA Y, selecionamos a opção ""Manage Users"" e realizamos o login no sistema de help desk.
+4. Localizamos o usuário do colaborador desligado e desmarcamos o parâmetro ""Enabled"".
+5. Localizamos o usuário do novo colaborador e marcamos o parâmetro ""Enabled"".
+6. Realizamos a transferência da licença.","2024-07-15 12:00 - Solicitação de transferência de licença recebida.
+2024-07-15 12:05 - Aval do keyuser XXXXXX confirmado.
+2024-07-15 12:10 - Logon realizado no sistema de help desk do SYSTEMA Y.
+2024-07-15 12:15 - Usuário do colaborador desligado localizado e inativado.
+2024-07-15 12:20 - Usuário do novo colaborador localizado e ativado.
+2024-07-15 12:25 - Licença transferida.
+2024-07-15 12:30 - Chamado finalizado com status de resolvido."
+Troca de perfil de usuário no Sistema Dynamics para voluntário com perfil de Gerente.,Troca de perfil de usuário,Dynamics,KB0054515,,,,,2,"1. Recebemos a solicitação de troca de perfil com o nome completo do usuário, login de rede e o novo perfil ""Gerente"".
+2. Confirmamos o aval da área de A EMPRESA X com o responsável XXXX.
+3. Acessamos o Sistema Dynamics, utilizando o ambiente de Produção e realizamos o login com e-mail corporativo.
+4. Navegamos até ""Configurações"" > ""Segurança"" e selecionamos ""Usuários"".
+5. Pesquisamos e selecionamos o usuário desejado.
+6. Alteramos os direitos de acesso clicando em 'Gerenciar Funções' e selecionando os itens [VOL] - Administração, [VOL] - APP, [VOL] - Survey.
+7. Configuramos os campos de ""Método de Sincronização"" na ""Caixa de Correio"" e salvamos as alterações.","2024-07-15 13:00 - Solicitação de troca de perfil recebida.
+2024-07-15 13:05 - Aval do responsável XXXX confirmado.
+2024-07-15 13:10 - Logon realizado no Sistema Dynamics.
+2024-07-15 13:15 - Usuário localizado e direitos de acesso alterados.
+2024-07-15 13:20 - Configurações de sincronização na ""Caixa de Correio"" realizadas.
+2024-07-15 13:25 - Chamado finalizado com status de resolvido."
+Troca de perfil de usuário no Sistema Dynamics para voluntário com perfil de Coordenador.,Troca de perfil de usuário,Sistema Dynamics,KB0054515,,,,,2,"1. Recebemos a solicitação de troca de perfil com o nome completo do usuário, login de rede e o novo perfil ""Coordenador"".
+2. Confirmamos o aval da área de A EMPRESA X com o responsável XXXX.
+3. Acessamos o Sistema Dynamics, utilizando o ambiente de Homologação e realizamos o login com e-mail corporativo.
+4. Navegamos até ""Configurações"" > ""Segurança"" e selecionamos ""Usuários"".
+5. Pesquisamos e selecionamos o usuário desejado.
+6. Alteramos os direitos de acesso clicando em 'Gerenciar Funções' e selecionando os itens [VOL] - Administração, [VOL] - APP, [VOL] - Survey.
+7. Configuramos os campos de ""Método de Sincronização"" na ""Caixa de Correio"" e salvamos as alterações.","2024-07-15 14:00 - Solicitação de troca de perfil recebida.
+2024-07-15 14:05 - Aval do responsável XXXX confirmado.
+2024-07-15 14:10 - Logon realizado no Sistema Dynamics.
+2024-07-15 14:15 - Usuário localizado e direitos de acesso alterados.
+2024-07-15 14:20 - Configurações de sincronização na ""Caixa de Correio"" realizadas.
+2024-07-15 14:25 - Chamado finalizado com status de resolvido."
+Troca de perfil de usuário no Sistema Dynamics para voluntário com perfil de Perfil A.,Troca de perfil de usuário,Sistema Dynamics,KB0054515,,,,,2,"1. Recebemos a solicitação de troca de perfil com o nome completo do usuário, login de rede e o novo perfil ""Perfil A"".
+2. Confirmamos o aval da área de A EMPRESA X com o responsável XXXX.
+3. Acessamos o Sistema Dynamics, utilizando o ambiente de Desenvolvimento e realizamos o login com e-mail corporativo.
+4. Navegamos até ""Configurações"" > ""Segurança"" e selecionamos ""Usuários"".
+5. Pesquisamos e selecionamos o usuário desejado.
+6. Alteramos os direitos de acesso clicando em 'Gerenciar Funções' e selecionando os itens [VOL] - Perfil A, [VOL] - APP.
+7. Configuramos os campos de ""Método de Sincronização"" na ""Caixa de Correio"" e salvamos as alterações.","2024-07-15 15:00 - Solicitação de troca de perfil recebida.
+2024-07-15 15:05 - Aval do responsável XXXX confirmado.
+2024-07-15 15:10 - Logon realizado no Sistema Dynamics.
+2024-07-15 15:15 - Usuário localizado e direitos de acesso alterados.
+2024-07-15 15:20 - Configurações de sincronização na ""Caixa de Correio"" realizadas.
+2024-07-15 15:25 - Chamado finalizado com status de resolvido."
+Solicitação de criação de um novo grupo de usuários no SISTEMA Y.,Criação de Grupo de Usuários,SISTEMA Y,KB0059112,,,,,1,"1. Recebido e verificado o chamado com o aval do coordenador (user@xxxxxxxxx.com.br).
+2. Acessado o SISTEMA Y via Internet Explorer.
+3. Navegado até a aba Segurança.
+4. Utilizado o assistente para acessar Grupos de Usuário.
+5. Selecionada a opção de criar novo grupo.
+6. Inserido o nome do novo grupo ""Equipe_Projetos"" no campo “Nome do Grupo”.
+7. Selecionados os colaboradores ""Ana Silva"", ""Carlos Souza"" e ""Beatriz Lima"" no campo “Não Relacionados” e transferidos para “Relacionados”.
+8. Salvadas as alterações e gerenciadas as permissões.
+9. Atribuídas as permissões necessárias e grupo criado com sucesso.
+10. Chamado finalizado com status de resolvido.","2024-07-15 10:00 - Solicitação de criação de grupo de usuários recebida.
+2024-07-15 10:05 - Aval do coordenador confirmado.
+2024-07-15 10:10 - Logon realizado no SISTEMA Y via Internet Explorer.
+2024-07-15 10:15 - Navegação até a aba Segurança e utilização do assistente para acessar Grupos de Usuário.
+2024-07-15 10:20 - Novo grupo ""Equipe_Projetos"" criado.
+2024-07-15 10:25 - Usuários selecionados e permissões atribuídas.
+2024-07-15 10:30 - Chamado finalizado com status de resolvido."
+Revisão semestral dos acessos no SISTEMA Y.,Revisão de Acessos,SISTEMA Y de ITSM,KB0059112,,,,,2,"1. Recebida a lista de acessos ativos gerada pelo time de Digital - Acessos.
+2. Encaminhada a lista ao Gestor de Negócio para validação.
+3. Recebida a lista validada com indicações de inativações.
+4. Abertos chamados no SISTEMA Y de ITSM de Digital em nome do Gestor de GQ-Digital.
+5. Executadas as inativações conforme indicado.
+Atualizadas as informações e finalizado o chamado.","2024-07-16 09:00 - Lista de acessos ativos recebida do time de Digital - Acessos.
+2024-07-16 09:15 - Lista encaminhada ao Gestor de Negócio para validação.
+2024-07-16 09:30 - Lista validada recebida com indicações de inativações.
+2024-07-16 09:45 - Chamados abertos no SISTEMA Y de ITSM de Digital em nome do Gestor de GQ-Digital.
+2024-07-16 10:00 - Inativações executadas conforme indicado.
+2024-07-16 10:15 - Informações atualizadas e chamado finalizado com status de resolvido."
+Solicitação de adição de novos usuários a um grupo existente no SISTEMA Y.,Atualização de Grupo de Usuários,SISTEMA Y,KB0059112,,,,,1,"1. Recebido chamado com a solicitação de adição de usuários ao grupo ""Desenvolvimento"".
+2. Verificado o aval do coordenador (user@xxxxxxxxx.com.br).
+3. Acessado o SISTEMA Y via Internet Explorer.
+4. Navegado até a aba Segurança e utilizado o assistente para acessar Grupos de Usuário.
+5. Selecionado o grupo ""Desenvolvimento"".
+Selecionados os novos usuários ""Fernanda Oliveira"" e ""José Santos"" no campo “Não Relacionados” e transferidos para “Relacionados”.
+6. Salvadas as alterações.
+7. Chamado finalizado com status de resolvido.","2024-07-17 14:00 - Solicitação de adição de usuários ao grupo ""Desenvolvimento"" recebida.
+2024-07-17 14:05 - Aval do coordenador confirmado.
+2024-07-17 14:10 - Logon realizado no SISTEMA Y via Internet Explorer.
+2024-07-17 14:15 - Navegação até a aba Segurança e utilização do assistente para acessar Grupos de Usuário.
+2024-07-17 14:20 - Grupo ""Desenvolvimento"" selecionado.
+2024-07-17 14:25 - Novos usuários ""Fernanda Oliveira"" e ""José Santos"" adicionados.
+2024-07-17 14:30 - Alterações salvas e chamado finalizado com status de resolvido.
+
+
+
+
+"
+ Alteração de Senha do Sistema Y.,Alteração de Senha,SISTEMA Y,KB0059113,,,,,1,"1. Recebido chamado com a solicitação de alteração de senha.
+2. Verificado os pré-requisitos: Nome completo, login e divisão.
+3. Acessado o SISTEMA Y.
+4. Selecionado o menu “Admin.Sistema” e em seguida clicado na opção “Usuário”.
+5. Pesquisado o usuário pelo nome completo.
+6. Selecionado o colaborador e clicado no botão “Alterar Senha”.
+7. Informada a nova senha e clicado no botão “Alterar Senha”.
+8. Chamado finalizado com status de resolvido.","2024-07-15 10:00 - Solicitação de alteração de senha recebida.
+2024-07-15 10:05 - Pré-requisitos verificados: Nome completo, login e divisão.
+2024-07-15 10:10 - Logon realizado no SISTEMA Y.
+2024-07-15 10:15 - Usuário localizado e senha alterada.
+2024-07-15 10:20 - Nova senha informada e alteração realizada.
+2024-07-15 10:25 - Chamado finalizado com status de resolvido."
+Alteração de Perfil de Usuário do Sistema Y.,Alteração de Perfil de Usuário,SISTEMA Y,KB0059113,,,,,1,"1. Recebido chamado com a solicitação de alteração de perfil.
+2. Verificado os pré-requisitos: Nome completo, responsabilidade, posição, divisão, usuário cópia, setor (para promotor) e supervisor (para promotor).
+3. Acessado o SISTEMA Y.
+4. Selecionado o menu “Admin.Sistema” e em seguida clicado na opção “Usuário”.
+5. Pesquisado o usuário pelo nome completo.
+6. Alterado o perfil conforme solicitado.
+7. Salvadas as alterações.
+8. Chamado finalizado com status de resolvido.","2024-07-15 11:00 - Solicitação de alteração de perfil recebida.
+2024-07-15 11:05 - Pré-requisitos verificados: Nome completo, responsabilidade, posição, divisão, usuário cópia, setor (para promotor) e supervisor (para promotor).
+2024-07-15 11:10 - Logon realizado no SISTEMA Y.
+2024-07-15 11:15 - Usuário localizado e perfil alterado.
+2024-07-15 11:20 - Alterações salvas.
+2024-07-15 11:25 - Chamado finalizado com status de resolvido."
+ Atribuição de Perfil a um Usuário no SISTEMA Y.,Atribuição de Perfil,SISTEMA Y,KB0059116,,,,,2,"1. Recebido e verificado o chamado com o aval do gerente.
+2. Acessado o SISTEMA Y via Internet Explorer.
+3. Navegado até a aba ""Segurança"" e clicado em ""Usuários"".
+4. Verificado se o usuário já existe utilizando a opção “Ativo” no campo “Filtros Rápidos” e pesquisado pelo nome do usuário.
+5. Selecionado o usuário com duplo clique.
+6. Navegado até a aba “Grupos” e adicionado o acesso para o usuário.
+7. Verificado se os módulos selecionados estão em “Funções” e clicado em “Salvar e Fechar”.
+8. Chamado finalizado com status de resolvido.","2024-07-15 15:00 - Solicitação de atribuição de perfil recebida.
+2024-07-15 15:05 - Aval do gerente confirmado.
+2024-07-15 15:10 - Logon realizado no SISTEMA Y via Internet Explorer.
+2024-07-15 15:15 - Usuário verificado e selecionado.
+2024-07-15 15:20 - Acesso adicionado para o usuário.
+2024-07-15 15:25 - Módulos verificados e alterações salvas.
+2024-07-15 15:30 - Chamado finalizado com status de resolvido."
+ Revisão Semestral dos Acessos no SISTEMA Y., Revisão de Acessos,Sistema de ITSM de Digital,KB0059116,,,,,2,"1. Recebida a lista de acessos ativos gerada pelo time de Digital - Acessos.
+2. Encaminhada a lista ao Gestor de Negócio para validação.
+3. Recebida a lista validada com indicações de inativações.
+4. Abertos chamados no Sistema de ITSM de Digital em nome do Gestor de GQ-Digital.
+5. Executadas as inativações conforme indicado.
+6. Atualizadas as informações e finalizado o chamado.","2024-07-16 09:00 - Lista de acessos ativos recebida do time de Digital - Acessos.
+2024-07-16 09:05 - Lista encaminhada ao Gestor de Negócio para validação.
+2024-07-16 09:10 - Lista validada recebida com indicações de inativações.
+2024-07-16 09:15 - Chamados abertos no Sistema de ITSM de Digital em nome do Gestor de GQ-Digital.
+2024-07-16 09:20 - Inativações executadas conforme indicado.
+2024-07-16 09:25 - Informações atualizadas e chamado finalizado com status de resolvido."
+Alteração de Perfil de Usuário do SISTEMA Y.,Alteração de Perfil de Usuário,SISTEMA Y,KB0059116,,,,,1,"1. Recebido chamado com a solicitação de alteração de perfil.
+2. Verificado os pré-requisitos: Aval do gerente e perfil desejado.
+3. Acessado o SISTEMA Y via Internet Explorer.
+4. Navegado até a aba ""Segurança"" e clicado em ""Usuários"".
+5. Verificado se o usuário já existe utilizando a opção “Ativo” no campo “Filtros Rápidos” e pesquisado pelo nome do usuário.
+6. Selecionado o usuário com duplo clique.
+7. Navegado até a aba “Grupos” e alterado o perfil do usuário.
+8. Verificado se os módulos selecionados estão em “Funções” e clicado em “Salvar e Fechar”.
+9. Chamado finalizado com status de resolvido.","2024-07-17 14:00 - Solicitação de alteração de perfil recebida.
+2024-07-17 14:05 - Aval do gerente confirmado e perfil desejado verificado.
+2024-07-17 14:10 - Logon realizado no SISTEMA Y via Internet Explorer.
+2024-07-17 14:15 - Usuário verificado e selecionado.
+2024-07-17 14:20 - Perfil do usuário alterado.
+2024-07-17 14:25 - Módulos verificados e alterações salvas.
+2024-07-17 14:30 - Chamado finalizado com status de resolvido."
+Remoção Total de Acesso do Colaborador no SISTEMA Y.,Remoção de Acesso Total,Office 365,KB0059193,,,,,2,"1. Recebido chamado com a solicitação de remoção total de acesso.
+2. Verificado os pré-requisitos: Equipamento configurado, acesso ao Microsoft Dynamics CRM 365, nome do usuário e aplicativos a serem removidos.
+3. Acessado o SISTEMA Y e navegado até Configurações -> Segurança -> Usuários.
+4. Selecionado o usuário e retirados todos os direitos de acesso relacionados ao aplicativo de Artes.
+5. Retirado o direito de acesso “Colaboração” ao usuário no SharePoint Online para os sites especificados.
+6. Retirada ou revisada a licença aos produtos no Centro de Administração do Office 365.
+7. Chamado finalizado com status de resolvido. ","2024-07-18 09:00 - Solicitação de remoção total de acesso recebida.
+2024-07-18 09:05 - Pré-requisitos verificados.
+2024-07-18 09:10 - Logon realizado no SISTEMA Y.
+2024-07-18 09:15 - Usuário selecionado e direitos de acesso relacionados ao aplicativo de Artes removidos.
+2024-07-18 09:20 - Direito de acesso “Colaboração” removido no SharePoint Online.
+2024-07-18 09:25 - Licenças revisadas e/ou removidas no Centro de Administração do Office 365.
+2024-07-18 09:30 - Chamado finalizado com status de resolvido."
+Remoção Parcial de Acesso do Colaborador no SISTEMA Y.,Remoção de Acesso Parcial,SISTEMA Y,KB0059193,,,,,1,"1. Recebido chamado com a solicitação de remoção parcial de acesso.
+2. Verificado os pré-requisitos: Equipamento configurado, acesso ao Microsoft Dynamics CRM 365, nome do usuário, aplicativos a serem removidos e nova unidade de negócio.
+3. Acessado o SISTEMA Y e navegado até Configurações -> Segurança -> Usuários.
+4. Selecionado o usuário e retirados os direitos de acesso relacionados aos aplicativos de Artes especificados.
+5. Realocada a nova unidade de negócio conforme informado.
+6. Chamado finalizado com status de resolvido.","2024-07-18 10:00 - Solicitação de remoção parcial de acesso recebida.
+2024-07-18 10:05 - Pré-requisitos verificados.
+2024-07-18 10:10 - Logon realizado no SISTEMA Y.
+2024-07-18 10:15 - Usuário selecionado e direitos de acesso relacionados aos aplicativos de Artes removidos.
+2024-07-18 10:20 - Usuário realocado na nova unidade de negócio.
+2024-07-18 10:25 - Chamado finalizado com status de resolvido."
+Criação de Usuário do SISTEMA Y, Criação de Usuário,SISTEMA Y,KB0059194,,,,,1,"1. Recebido chamado para criação de um novo usuário no SISTEMA Y.
+2. Verificado os pré-requisitos: Nome do colaborador, login de rede, e-mail, grupo de acesso e autorização.
+3. Acessado o SISTEMA Y e navegado até a seção de gerenciamento de usuários.
+4. Inseridos os dados do novo usuário conforme pré-requisitos.
+5. Atribuído o grupo de acesso adequado (Everyone, Administrator, Help Desk Administrator).
+6. Confirmada a criação do usuário e enviado e-mail de confirmação ao solicitante.
+7. Chamado finalizado com status de resolvido.","2024-07-20 09:00 - Solicitação de criação de usuário recebida.
+2024-07-20 09:05 - Pré-requisitos verificados.
+2024-07-20 09:10 - Logon realizado no SISTEMA Y.
+2024-07-20 09:15 - Dados do novo usuário inseridos.
+2024-07-20 09:20 - Grupo de acesso atribuído.
+2024-07-20 09:25 - E-mail de confirmação enviado ao solicitante.
+2024-07-20 09:30 - Chamado finalizado com status de resolvido."
+Criação de Conta de Usuário no SAP,Criação de Usuário,SAP,KB0059210,,,,,1,"1. Recebido chamado para criação de uma nova conta de usuário no SAP.
+2. Verificados os pré-requisitos: número da identidade ou CPF do usuário, dados da conta a ser criada.
+3. Acessado o SAP Logon e selecionado o ambiente ""02) A EMPRESA X ERP Produção"".
+4. Digitada a transação ZBO104.
+5. Informada a identidade do colaborador e executada a pesquisa.
+6. Confirmada a ausência de conta existente e iniciada a criação de nova conta.
+7. Preenchidos os campos do sistema e login do usuário.
+8. Salvo o cadastro do usuário e validado o e-mail.
+9. Finalizada a criação da conta e verificada a conta criada.
+10. Chamado finalizado com status de resolvido.","2024-07-25 09:00 - Solicitação de criação de conta de usuário recebida.
+2024-07-25 09:05 - Pré-requisitos verificados.
+2024-07-25 09:10 - Logon realizado no SAP.
+2024-07-25 09:15 - Transação ZBO104 executada.
+2024-07-25 09:20 - Identidade do colaborador informada e pesquisa executada.
+2024-07-25 09:25 - Criação de nova conta iniciada.
+2024-07-25 09:30 - Campos do sistema e login preenchidos.
+2024-07-25 09:35 - Cadastro do usuário salvo e e-mail validado.
+2024-07-25 09:40 - Criação da conta finalizada e verificada.
+2024-07-25 09:45 - Chamado finalizado com status de resolvido."
+"Usuário reporta que após realizar o HardReset no dispositivo Android, não consegue escanear o QRCode fornecido para a configuração do Android Device Policy.",Problema de Configuração,Android Device Policy,KB00510002,,,,,2,"1. Verificar se a câmera do dispositivo está funcionando corretamente.
+2. Instruir o usuário a inserir manualmente o código RUCNJNUC caso o erro persista.
+3. Confirmar se o usuário está seguindo corretamente as etapas de configuração, principalmente a inserção do valor afw#setup no campo do e-mail.","2024-07-15 10:00 - Chamado recebido.
+2024-07-15 10:05 - Verificação do funcionamento da câmera do dispositivo.
+2024-07-15 10:10 - Orientação ao usuário para inserir manualmente o código RUCNJNUC.
+2024-07-15 10:15 - Confirmado que o usuário seguiu corretamente as etapas de configuração.
+2024-07-15 10:20 - Chamado finalizado com status de resolvido."
+Usuário não consegue fazer logon com a conta da EMPRESA X após aceitar os termos do Android Device Policy.,Problema de Autenticação,Android Device Policy,KB00510002,,,,,1,"1. Verificar se as credenciais da conta da EMPRESA X estão corretas.
+2. Confirmar se o dispositivo está conectado a uma rede Wi-Fi estável.
+3. Auxiliar o usuário a resetar a senha da conta, se necessário.","2024-07-15 11:00 - Chamado recebido.
+2024-07-15 11:05 - Verificação das credenciais da conta da EMPRESA X.
+2024-07-15 11:10 - Confirmação da conexão do dispositivo à rede Wi-Fi.
+2024-07-15 11:15 - Assistência ao usuário para resetar a senha da conta.
+2024-07-15 11:20 - Chamado finalizado com status de resolvido."
+"Após a conclusão do logon com a conta da EMPRESA X, os aplicativos e configurações não estão sendo aplicados automaticamente no dispositivo Android.",Problema de Aplicação de Configurações,SISTEMA Y,KB00510002,,,,,2,"1. Verificar se o dispositivo está conectado à internet.
+2. Confirmar se o perfil do colaborador está configurado corretamente no portal SISTEMA Y.
+3. Repetir as etapas de configuração desde a seleção do idioma até o logon final.","2024-07-15 12:00 - Chamado recebido.
+2024-07-15 12:05 - Verificação da conexão do dispositivo à internet.
+2024-07-15 12:10 - Confirmação da configuração do perfil do colaborador no portal SISTEMA Y.
+2024-07-15 12:15 - Repetição das etapas de configuração com o usuário.
+2024-07-15 12:30 - Chamado finalizado com status de resolvido."

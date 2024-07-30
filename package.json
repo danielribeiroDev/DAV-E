@@ -1,0 +1,23 @@
+{
+  "name": "web-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "node --test tests/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "express": "^4.19.2",
+    "openai": "^4.53.2",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
