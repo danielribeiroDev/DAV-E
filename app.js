@@ -1,37 +1,60 @@
+///:: http server handle
 import express from 'express';
-import { initializeServices } from './src/loader.js';
-import ticketRoutes from './src/routes/ticketRoutes.js'; // Certifique-se de que o caminho esteja correto
+
+///:: relational database init function
 import { initializeDatabase } from './src/database.js';
 
+///:: vector database provider and embeddings provider 
+import { Chroma } from '@langchain/community/vectorstores/chroma';
+import { OpenAIEmbeddings } from '@langchain/openai';
+
+///:: collection 
+import { gvCollectionServiceInstance } from './src/factories/vCollectionFactory.js';
+import { grCollectionServiceInstance } from './src/factories/rCollectionFactory.js';
+import collectionRoutes from './src/routes/collectionRoutes.js';
+
+///:: files loader
+import Loader from './src/services/AI/Loader.js';
+
+///:: set up .env vars
+import * as dotenv from "dotenv";
+dotenv.config();
+
+///:: setup server
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-///:: Middlewares  
+///:: set up iddlewares  
 app.use(express.json());
+
+///:: set up static files
+app.use(express.static('public'))
 
 async function startServer() {
   try {
+    const db = await initializeDatabase()
 
-    const credentials = {
-      user: 'ADMIN',
-      host: 'localhost', // Use 'localhost' if running outside Docker or 'postgres' if within the Docker network
-      database: 'postgres',
-      password: 'ADMIN',
-      port: 5432,
-    } 
+    const vcollectionService = gvCollectionServiceInstance(
+      {
+        provider: Chroma,
+        url: "http://localhost:8000",
+        embeddingHanldeObject: new OpenAIEmbeddings(),
+        hnsw_space: "cosine"
+      }
+    )
+    const rcollectionService = grCollectionServiceInstance({ db })
 
-    ///:: Initialize Database
-    const db = await initializeDatabase({
-      credentials
-    })
+    const loader = new Loader()
 
-    ///:: Initialize services
-    const services = await initializeServices(db);
+    ///:: set up default route
+    app.get('/', (req, res) => {
+      res.sendFile(path.join(__dirname, 'public', 'html', 'index.html'));
+    });
 
-    ///:: Configure routes
-    app.use('/tickets', ticketRoutes(services.ticketService));
+    ///:: set up collection routes
+    app.use('/collections', collectionRoutes(vcollectionService, rcollectionService, loader))
 
-    ///: Init express server 
+    ///:: init express server 
     app.listen(PORT, () => {
       console.log(`Server is running at ${PORT}`);
     });

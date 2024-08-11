@@ -1,15 +1,15 @@
 import pkg from 'pg';
 const { Pool } = pkg;
+import * as dotenv from "dotenv";
+dotenv.config();
 
-async function initializeDatabase({
-    credentials
-}) {
+async function initializeDatabase() {
     const pool = new Pool({
-        user: credentials.user,
-        host: credentials.host,
-        database: credentials.database,
-        password: credentials.password,
-        port: credentials.port,
+        user: process.env.POSTGRES_USER,
+        host: process.env.POSTGRES_HOST,
+        database: process.env.POSTGRES_DATABASE,
+        password: process.env.POSTGRES_PASSWORD,
+        port: process.env.POSTGRES_PORT,
     });
 
     await verifyConnection(pool).catch(err => {
