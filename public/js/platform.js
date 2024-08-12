@@ -272,7 +272,7 @@ function appendHtml(id, template) {
 
 async function postPackage({ route, body }) {
     
-    const response = await fetch(`http://localhost:3000/${route}`, {
+    const response = await fetch(`https://d997-186-233-178-33.ngrok-free.app/${route}`, {
         body: JSON.stringify(body),
         method: "POST",
         headers: {
@@ -286,7 +286,7 @@ async function postPackage({ route, body }) {
 }
 
 async function getPackage(route) {
-    const response = await fetch(`http://localhost:3000/${route}`, {
+    const response = await fetch(`https://d997-186-233-178-33.ngrok-free.app/${route}`, {
         method: "GET",
     })
 
@@ -302,7 +302,7 @@ async function postFile(route, file, options) {
         formData.append(key, value);
     }
 
-    const response = await fetch(`http://localhost:3000/${route}`, {
+    const response = await fetch(`https://d997-186-233-178-33.ngrok-free.app/${route}`, {
         method: 'POST',
         body: formData
      });

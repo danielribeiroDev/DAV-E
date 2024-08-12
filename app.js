@@ -20,8 +20,11 @@ import Loader from './src/services/AI/Loader.js';
 import * as dotenv from "dotenv";
 dotenv.config();
 
+import cors from 'cors';
+
 ///:: setup server
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 ///:: set up iddlewares  

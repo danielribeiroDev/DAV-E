@@ -85,8 +85,8 @@ async function rclearAllCollectionsAndFilles() {
 // Assumindo que `chromaClient` já está configurado para se conectar ao Chroma DB
 //clearAllCollections()
 
-// await rclearAllCollectionsAndFilles()
-// await vclearAllCollections()
+await rclearAllCollectionsAndFilles()
+await vclearAllCollections()
 
-getAllCollections()
+//getAllCollections()
 

@@ -79,6 +79,7 @@ export default function collectionRoutes(vCollectionService, rCollectionService,
     }
   })
 
+  ///:: multer to handle uploaded files
   router.post('/files/upload', upload.single('file'),async (req, res) => {
     try {
       const rfile = await rCollectionService.addFile({
