@@ -96,12 +96,30 @@ export default function collectionRoutes(vCollectionService, rCollectionService,
           break;
         
         case 'application/pdf':
-          doc = await loader.pdf({ path: req.file.destination })
-          
+          doc = await loader.pdf({ path: join(req.file.destination, req.file.originalname) })
+          await vCollectionService.addFile({ doc, collectionId: rfile.collectionId })
           break;
         
         case 'text/plain':
           doc = await loader.txt({ path: req.file.destination })
+          break;
+        
+        case 'image/png':
+          doc = loader.image({ 
+            path: req.file.destination, 
+            description: req.body.description 
+          })
+          await vCollectionService.addFile({ doc, collectionId: rfile.collectionId })
+
+          break;
+        
+        case '/image/jpeg':
+          doc = loader.image({ 
+            path: req.file.destination, 
+            description: req.body.description 
+          })
+          await vCollectionService.addFile({ doc, collectionId: rfile.collectionId })
+          
           break;
       
         default:

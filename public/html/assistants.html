@@ -58,7 +58,8 @@
     <!-- Page CSS -->
 
     <!-- Platform -->
-     <script src="../js/platform.js"></script>
+     <script src="../js/platform-helpers.js" ></script>
+     <script src="../js/assistants.js" ></script>
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
@@ -159,6 +160,13 @@
                 <div data-i18n="Layouts">Assistants</div>
               </a>
             </li>
+
+            <li class="menu-item">
+              <a href="/html/chat.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-support"></i>
+                <div data-i18n="Layouts">Chat</div>
+              </a>
+            </li>
             <!-- Misc -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
             <li class="menu-item">
@@ -220,48 +228,21 @@
                 <div class="col-md-6 col-lg-4 order-1 mb-4 h-100">
                   <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                      <h5 class="card-title m-0 me-2">Assistants                       <button type="button" class="btn btn-xs rounded-pill btn-icon btn-secondary" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span>A collection is a group of files that serve a certain purpose.</span>">
+                      <h5 class="card-title m-0 me-2">Assistants<button type="button" class="btn btn-xs rounded-pill btn-icon btn-secondary" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span>A collection is a group of files that serve a certain purpose.</span>">
                           <i class='bx bx-question-mark' style='color:#ffffff'  ></i>
-                      </button>   </h5>
+                      </button></h5>
                     </div>
                     <div class="card-body overflow-auto">
-                      <ul id="collection-list" class="p-0 m-0">
-                        <li class="d-flex mb-4 pb-1">
-                          <div class="avatar-no-pointer flex-shrink-0 me-3 align-content-center">
-                            <span class="tf-icons bx bx-collection"></span>
-                          </div>
-                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                            <div class="me-2">
-                              <h6 class="mb-0">Jarvis</h6>
-                            </div>
-                            <div class="user-progress d-flex align-items-center gap-1">
-                              <span class="text-muted">id:Vzhdi...kgh</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
-                          <div class="avatar-no-pointer flex-shrink-0 me-3 align-content-center">
-                            <span class="tf-icons bx bx-collection"></span>
-                          </div>
-                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                            <div class="me-2">
-                              <h6 class="mb-0">Ultron</h6>
-                            </div>
-                            <div class="user-progress d-flex align-items-center gap-1">
-                              <span class="text-muted">id:Vzhdi...kgh</span>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                     
+                      <ul id="assistant-list" class="p-0 m-0">
 
+                      </ul>
                       </button>
                     </div>
                     <div class="card-footer text-center">
-                      <button id="" type="button" class="btn rounded-pill btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-collections">
-                        <span class="tf-icons bx bx-plus"></span>&nbsp; Create Assistent
+                      <button id="" type="button" class="btn rounded-pill btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-assistants">
+                        <span class="tf-icons bx bx-plus"></span>&nbsp; Create Assistant
                       </button>
-                      <div class="modal fade" id="modal-collections" tabindex="-1" style="display: none;" aria-hidden="true">
+                      <div class="modal fade" id="modal-assistants" tabindex="-1" style="display: none;" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -271,8 +252,14 @@
                             <div class="modal-body">
                               <div class="row">
                                 <div class="col mb-3">
-                                  <label for="collection-name" class="form-label">Collection Name</label>
-                                  <input type="text" id="collection-name" class="form-control" placeholder="Enter Name">
+                                  <label for="assistant-name" class="form-label">Assistant name</label>
+                                  <input type="text" id="assistant-name" class="form-control" placeholder="Enter name">
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col mb-3">
+                                  <label for="assistant-description" class="form-label">Assistant description</label>
+                                  <input type="text" id="assistant-description" class="form-control" placeholder="Enter name">
                                 </div>
                               </div>
                             </div>
@@ -280,7 +267,7 @@
                               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                                 Close
                               </button>
-                              <button id="create-collection" type="submit" class="btn btn-primary">Create</button>
+                              <button id="create-assistant" type="submit" class="btn btn-primary">Create</button>
                             </div>
                           </div>
                         </div>
@@ -305,37 +292,22 @@
                           <table class="table table-borderless">
                             <thead>
                               <tr>
-                                <th>File</th>
+                                <th>Collection</th>
                                 <th>Id</th>
-                                <th>Uploaded</th>
                                 <th>Actions</th>
                               </tr>
                             </thead>
-                            <tbody id="file-table">
-                              <tr>
-                                <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>January Balance</strong></td>
-                                <td>ZsfahafdhF...dJk</td>
-                                <td>05/08/2024</td>
-                                <td>
-                                  <div class="dropdown" style="position: inherit;">
-                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                      <i class="bx bx-dots-vertical-rounded"></i>
-                                    </button>
-                                    <div class="dropdown-menu">
-                                      <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
+                            <tbody id="collection-table" data-refered-assistant-uuid="">
+
                             </tbody>
                           </table>
                         </div>
                       </div>
                       <div class="card-footer text-center">
-                        <button type="button" class="btn rounded-pill btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-files">
-                          <span class="tf-icons bx bx-plus"></span>&nbsp; Attach Collection
+                        <button id="attach-collection-button" type="button" class="btn rounded-pill btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-collections">
+                          <span class="tf-icons bx bx-plus"></span>&nbsp; Attach collection
                         </button>
-                        <div class="modal fade" id="modal-files" tabindex="-1" style="display: none;" aria-hidden="true">
+                        <div class="modal fade" id="modal-collections" tabindex="-1" style="display: none;" aria-hidden="true">
                           <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -343,30 +315,34 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body" style="text-align: left;">
-                                <div class="col mb-3">
-                                  <div class="row  g-2">
-                                    <label for="file" class="form-label">Your file</label>
-                                    <input class="form-control" type="file" id="file">
-                                  </div>
-                                </div>
-                                <div class="row  g-2">
-                                  <div class="col mb-3">
-                                    <label for="file-description" class="form-label">Description</label>
-                                    <input type="text" id="file-description" class="form-control" placeholder="File contains information about finance process at last year . . . ">
-                                  </div>
-                                </div>
-                                <div class="row g-2">
-                                  <div class="col mb-0">
-                                    <label for="file-purpose" class="form-label">Purpose</label>
-                                    <input type="text" id="file-purpose" class="form-control" placeholder="Provide information about finance process . . . ">
-                                  </div>
+                                <div id="available-collections" class="list-group">
+                                  <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    Soufflé pastry pie ice
+                                  </label>
+                                  <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    Bear claw cake biscuit
+                                  </label>
+                                  <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    Tart tiramisu cake
+                                  </label>
+                                  <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    Bonbon toffee muffin
+                                  </label>
+                                  <label class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    Dragée tootsie roll
+                                  </label>
                                 </div>
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                                   Close
                                 </button>
-                                <button id="add-file" type="button" class="btn btn-primary">Attach</button>
+                                <button id="attach-collection" type="button" class="btn btn-primary">Attach</button>
                               </div>
                             </div>
                           </div>
@@ -421,6 +397,12 @@
       <!-- Overlay -->
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
+
+    <div id="loading-overlay">
+      <div class="spinner-border spinner-border-lg text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>  
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

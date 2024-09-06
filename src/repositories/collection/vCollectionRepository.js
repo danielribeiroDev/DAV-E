@@ -17,12 +17,14 @@ export default class vCollectionRepository {
     }
 
     async get({ id }) {
-        return await this.provider.fromExistingCollection(
+        const vcollection =  await this.provider.fromExistingCollection(
             this.embeddingHanldeObject,
             {
                 collectionName: id  
             }
         )
+
+        return vcollection
     }
 
     async addFile({ doc, collectionId }) {

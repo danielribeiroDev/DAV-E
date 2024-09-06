@@ -112,22 +112,42 @@
   height: 2.375rem;
 }
 
-#collection-list li:hover{
+#collection-list li:hover, #assistant-list li:hover{
   cursor: pointer;
   background-color: rgba(67, 89, 113, 0.04);
   border-radius: 2.5px;
 }
 
-#collection-list li {
+#collection-list li, #assistant-list li {
   padding-left: 4px;
   padding-right: 4px;
 }
 
-#collection-list .active {
+#collection-list .active, #assistant-list .active {
   background-color: rgba(67, 89, 113, 0.04);
   border-radius: 2.5px;
 }
 
 .bx-dots-vertical-rounded:hover{
   color: #696cff;
+}
+
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25); /* Escurece a tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Coloca por cima de outros elementos, inclusive modais */
+  visibility: hidden; /* Inicialmente oculto */
+  transition: 0.5s;
+}
+
+#loading-overlay.show {
+  visibility: visible;
+  transition: 0.5s;
 }

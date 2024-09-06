@@ -1,4 +1,4 @@
-// Load the DOM
+
 document.addEventListener("DOMContentLoaded", function() {
     var modalCollections = new bootstrap.Modal('#modal-collections')
     var modalFiles = new bootstrap.Modal('#modal-files')
@@ -6,119 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
     generateCollectionsUI()
     // Get the element by ID
     document.getElementById("create-collection").addEventListener("click", async (e) => {
-        const template = 
-       `
-        <li class="d-flex mb-4 pb-1 collection-item">
-            <div class="avatar-no-pointer flex-shrink-0 me-3 align-content-center">
-            <span class="tf-icons bx bx-collection"></span>
-            </div>
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-            <div class="me-2">
-                <h6 class="mb-0">{collection-name}</h6>
-            </div>
-            <div class="user-progress d-flex align-items-center gap-1">
-                <span class="text-muted" data-uuid="{data-collection-id}">{collection-id}</span>
-                <div class="dropdown" style="position: inherit;">
-                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                </button>
-                <div class="dropdown-menu delete-item">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                </div>
-                </div>
-            </div>
-            </div>
-        </li>
-        `
-
-        const collectionName = document.getElementById("collection-name")
-        const collectionDescription = document.getElementById("collection-description")
-
-        const payload = await postPackage({
-            route: "collections",
-            body: {
-                collection: {
-                    name: collectionName.value,
-                    description: collectionDescription.value
-                }
-            }
-        })
-
-        const replacements = {
-            '{collection-name}': payload.collection.name,
-            '{collection-id}':  formatUUID(payload.collection.id),
-            '{data-collection-id}': payload.collection.id
-        }
-
-        const filledTemplate = fillTemplate(template, replacements)
-        appendHtml("collection-list", filledTemplate)
-        document.getElementById('collection-list').lastElementChild.addEventListener('click', async e => {
-            document.querySelector('#file-table').innerHTML = ''
-            document.querySelectorAll('.collection-item').forEach(i => i.classList.remove('active'));
-            e.currentTarget.classList.add('active');
-            let collectionuuid = e.target.querySelector('[data-uuid]').dataset.uuid
-            document.querySelector('[data-refered-collection-uuid]').dataset.referedCollectionUuid = collectionuuid
-
-            // item.querySelector('.delete-item').addEventListener('click', function(e) {
-            //     e.stopPropagation();
-            //     console.log(`Item ${item.querySelector('h6').textContent} deletado!`);
-            // })
-            const payload = await getPackage(`collections/files/${collectionuuid}`)
-            generateCollectionFilesUI(payload.files)
-        })
-
-        collectionName.value = ''
-        collectionDescription.value = ''
-        modalCollections.hide()
+        createCollection(e, modalCollections)
     })
 
     document.getElementById("add-file").addEventListener("click", async (e) => {
-        const template = 
-        `
-        <tr>
-            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{file-name}</strong></td>
-            <td>{file-id}</td>
-            <td>{file-date}</td>
-            <td>
-                <div class="dropdown" style="position: inherit;">
-                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                    <i class="bx bx-dots-vertical-rounded"></i>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                </div>
-                </div>
-            </td>
-        </tr>
-        `
-        const fileDescription = document.getElementById("file-description")
-        const filePurpose = document.getElementById("file-purpose")
-        const fileInput = document.getElementById("file")
-
-        const payload = await postFile('collections/files/upload', fileInput.files[0], {
-            collectionId: document.querySelector('[data-refered-collection-uuid]').dataset.referedCollectionUuid,
-            description: fileDescription.value,
-            purpose: filePurpose.value
-        })
-
-        const replacements = {
-            '{file-name}': payload.file.name,
-            '{file-id}': payload.file.id,
-            '{file-date}': payload.file.date,
-        };
-        
-        let filledTemplate = template
-        for (const key in replacements) {
-            filledTemplate = filledTemplate.replace(key, replacements[key]);
-        }
-
-        appendHtml("file-table", filledTemplate)
-
-        fileDescription.value = ''
-        filePurpose.value = ''
-        fileInput.value = ''
-
-        modalFiles.hide()
+        addFile(e, modalFiles)
     })
 });
 
@@ -198,6 +90,131 @@ const generateCollectionFilesUI = (filesInfo) => {
     appendHtml("file-table", content)
 }
 
+const createCollection = async (e, modalCollections) => {
+    const template = 
+       `
+        <li class="d-flex mb-4 pb-1 collection-item">
+            <div class="avatar-no-pointer flex-shrink-0 me-3 align-content-center">
+            <span class="tf-icons bx bx-collection"></span>
+            </div>
+            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+            <div class="me-2">
+                <h6 class="mb-0">{collection-name}</h6>
+            </div>
+            <div class="user-progress d-flex align-items-center gap-1">
+                <span class="text-muted" data-uuid="{data-collection-id}">{collection-id}</span>
+                <div class="dropdown" style="position: inherit;">
+                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                    <i class="bx bx-dots-vertical-rounded"></i>
+                </button>
+                <div class="dropdown-menu delete-item">
+                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </li>
+        `
+
+    const collectionName = document.getElementById("collection-name")
+    const collectionDescription = document.getElementById("collection-description")
+
+    const payload = await postPackage({
+        route: "collections",
+        body: {
+            collection: {
+                name: collectionName.value,
+                description: collectionDescription.value
+            }
+        }
+    })
+
+    const replacements = {
+        '{collection-name}': payload.collection.name,
+        '{collection-id}':  formatUUID(payload.collection.id),
+        '{data-collection-id}': payload.collection.id
+    }
+
+    const filledTemplate = fillTemplate(template, replacements)
+    appendHtml("collection-list", filledTemplate)
+    const lastChild = document.getElementById('collection-list').lastElementChild
+    lastChild.addEventListener('click', async e => {
+        setActiveItem({ 
+            e,
+            classList: '.collection-item', 
+            data: 'data-refered-collection-uuid', 
+            datasetParam: 'referedCollectionUuid',
+            table: 'file'
+        } )
+        // item.querySelector('.delete-item').addEventListener('click', function(e) {
+        //     e.stopPropagation();
+        //     console.log(`Item ${item.querySelector('h6').textContent} deletado!`);
+        // })
+        const payload = await getPackage(`collections/files/${collectionuuid}`)
+        generateCollectionFilesUI(payload.files)
+    })
+
+    setActiveItem({ 
+        classList: '.collection-item', 
+        data: 'data-refered-collection-uuid', 
+        datasetParam: 'referedCollectionUuid', 
+        element: lastChild,
+        table: 'file' 
+    })
+
+    collectionName.value = ''
+    collectionDescription.value = ''
+    modalCollections.hide()
+}
+
+const addFile = async (e, modalFiles) => {
+    const template = 
+        `
+        <tr>
+            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{file-name}</strong></td>
+            <td>{file-id}</td>
+            <td>{file-date}</td>
+            <td>
+                <div class="dropdown" style="position: inherit;">
+                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                    <i class="bx bx-dots-vertical-rounded"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                </div>
+                </div>
+            </td>
+        </tr>
+        `
+    const fileDescription = document.getElementById("file-description")
+    const filePurpose = document.getElementById("file-purpose")
+    const fileInput = document.getElementById("file")
+
+    const payload = await postFile('collections/files/upload', fileInput.files[0], {
+        collectionId: document.querySelector('[data-refered-collection-uuid]').dataset.referedCollectionUuid,
+        description: fileDescription.value,
+        purpose: filePurpose.value
+    })
+
+    const replacements = {
+        '{file-name}': payload.file.name,
+        '{file-id}': payload.file.id,
+        '{file-date}': payload.file.date,
+    };
+    
+    let filledTemplate = template
+    for (const key in replacements) {
+        filledTemplate = filledTemplate.replace(key, replacements[key]);
+    }
+
+    appendHtml("file-table", filledTemplate)
+
+    fileDescription.value = ''
+    filePurpose.value = ''
+    fileInput.value = ''
+    modalFiles.hide()
+}
+
 const generateCollectionsUI = async () => {
     let content = ``
     const template = 
@@ -254,73 +271,5 @@ const generateCollectionsUI = async () => {
             e.stopPropagation();
         })
     });
-
-    
 }
 
-function fillTemplate(template, replacements, ) {
-    let filledTemplate = template;
-    for (const key in replacements) {
-        filledTemplate = filledTemplate.replace(key, replacements[key]);
-    }
-    return filledTemplate;
-}
-
-function appendHtml(id, template) {
-    document.getElementById(id).insertAdjacentHTML('beforeend', template);
-}
-
-async function postPackage({ route, body }) {
-    
-    const response = await fetch(`https://d997-186-233-178-33.ngrok-free.app/${route}`, {
-        body: JSON.stringify(body),
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json' // Define o tipo de conteúdo como JSON
-        },
-    })
-
-    const payload = await response.json()
-
-    return payload
-}
-
-async function getPackage(route) {
-    const response = await fetch(`https://d997-186-233-178-33.ngrok-free.app/${route}`, {
-        method: "GET",
-    })
-
-    const payload = await response.json()
-
-    return payload
-}
-
-async function postFile(route, file, options) {
-    const formData = new FormData();
-    formData.append('file', file);
-    for (const [key, value] of Object.entries(options)) {
-        formData.append(key, value);
-    }
-
-    const response = await fetch(`https://d997-186-233-178-33.ngrok-free.app/${route}`, {
-        method: 'POST',
-        body: formData
-     });
-    const payload = await response.json();
-
-    return payload
-}
-
-function formatUUID(uuid) {
-    const startLength = 5; 
-    const endLength = 3;  
-
-    if (uuid.length <= startLength + endLength) {
-       
-        return uuid;
-    }
-
-    const start = uuid.substring(0, startLength);
-    const end = uuid.substring(uuid.length - endLength);
-    return `${start}...${end}`;
-}

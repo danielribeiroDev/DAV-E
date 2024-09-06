@@ -1,4 +1,8 @@
 import { CSVLoader } from "@langchain/community/document_loaders/fs/csv"
+import { TextLoader } from "langchain/document_loaders/fs/text";
+import { Document } from "@langchain/core/documents";
+import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
+
 
 export default class Loader {
     constructor() {
@@ -11,10 +15,23 @@ export default class Loader {
     }
 
     async pdf({ path }) {
-        
+        const loader = new PDFLoader(path);
+        return  await loader.load()
     }
 
     async txt({ path }) {
+        const loader = new TextLoader(path)
+        return await loader.load()
+    }
 
+    image({ path, description }) {
+        const doc = new Document({
+            pageContent: description,
+            metadata: {
+                source: path,
+                type: "image"
+            }
+        })
+        return doc
     }
 }
