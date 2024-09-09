@@ -141,12 +141,17 @@ async function getAllAssistantCollections() {
     console.log(result)
 }
 
+// await createAssistantsTable()
+// await createAssistantsCollectionsTable()
+// await createChatsTable()
+await run_rdb()
+
 // Exemplo de uso com um cliente fictício do Chroma DB
 // Assumindo que `chromaClient` já está configurado para se conectar ao Chroma DB
 //clearAllCollections()
 
-await rclearAllCollectionsAndFillesAndAssistants()
-await vclearAllCollections()
+//await rclearAllCollectionsAndFillesAndAssistants()
+//await vclearAllCollections()
 
 //getAllCollections()
 //await createAssistantsTable()

@@ -90,6 +90,7 @@ async function startServer() {
     ///:: init express server 
     app.listen(PORT, () => {
       console.log(`Server is running at ${PORT}`);
+      console.log(`http://localhost:${PORT}`)
     });
   } catch (error) {
     console.error('Failed to start the server', error);

@@ -25,11 +25,11 @@ $primary-color: #696cff;
 // ---------------------------------------------------------------------------
 @include template-menu-style(
   '.bg-menu-theme',
-  $white,
-  $color: $body-color,
+  $pretofundo,
+  $color: $white,
   $active-color: $headings-color,
   $border: transparent,
-  $active-bg: $white
+  $active-bg: $pretofundo
 );
 
 .bg-menu-theme {
