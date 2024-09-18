@@ -122,3 +122,51 @@ async function setActiveChat(e) {
     setupChatList()
  }
 
+ document.addEventListener("DOMContentLoaded", function() {
+    const inputField = document.querySelector('#chat-input');
+    const sendButton = document.querySelector('#send-message');
+    const messageContainer = document.getElementById('message-container');
+
+    // Enviar a mensagem
+    function sendMessage() {
+        const userMessage = inputField.value;
+        if (userMessage.trim() !== "") {
+            // Exibe a mensagem do usuário na direita
+            appendMessage(userMessage, 'user-message');
+            
+            // Enviar a mensagem para o chatbot e exibir a resposta
+            getChatbotResponse(userMessage);
+            
+            inputField.value = ""; // Limpar o campo de entrada
+        }
+    }
+
+    // Clique no botão de envio
+    sendButton.addEventListener('click', sendMessage);
+
+    // Pressionar Enter para enviar
+    inputField.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Sem quebra de linha
+            sendMessage(); // Enviar a mensagem
+        }
+    });
+
+    // adicionar mensagens no chat
+    function appendMessage(message, messageType) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', messageType);
+        messageElement.textContent = message;
+        messageContainer.appendChild(messageElement);
+        messageContainer.scrollTop = messageContainer.scrollHeight; // Scroll 
+    }
+
+    // Depois integra com a API
+    function getChatbotResponse(userMessage) {
+        // placeholder
+        setTimeout(function() {
+            const botResponse = "Lorem ipsum"; // Placeholder
+            appendMessage(botResponse, 'bot-message');
+        }, 1000);
+    }
+});

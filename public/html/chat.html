@@ -108,7 +108,7 @@
               </a>
             </li>
 
-            <li class="menu-item active open" style="">
+            <li class="menu-item active open">
               <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-support"></i>
                 <div data-i18n="User interface">Chat</div>
@@ -175,9 +175,13 @@
                         </div>
                       </div>
                       <div class="card-body overflow-auto">
+                        <!-- campo de mensagem -->
+                        <div class="chat-container">
+                          <div id="message-container"></div>
+                        </div>
                       </div>
                       <div class="card-footer">
-                        <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center" id="layout-navbar">
+                        <nav class=" container-xxl navbar navbar-expand-xl align-items-center" id="layout-navbar">
                             <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
                               <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
                                 <i class="bx bx-menu bx-sm"></i>
@@ -185,18 +189,19 @@
                             </div>
                 
                             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-                              <!-- Search -->
-                              <div class="navbar-nav align-items-center" style="width: 100%;">
-                                <div class="nav-item d-flex align-items-center " style="width: 100%;">
+                              
+                              <!-- Envio de mensagem -->
+                              <div class="navbar-nav align-items-center justify-content-center w-100" >
+                                <div class="nav-item d-flex align-items-center w-100">
                                   <label for="chat-files">
-                                    <i class="bx bx-upload fs-4 lh-0"></i>
+                                    <i class="bx bx-upload fs-4 lh-0 text-white cursor-pointer btnupload"></i>
                                   </label>
                                   <input id="chat-files" type="file" style="display: none;">
-                                  <input type="text" class="form-control border-0 shadow-none" placeholder="Digite sua mensagem..." aria-label="Search...">
-                                  <i class="bx bxs-send fs-3 lh-0"></i>
+                                  <input id="chat-input" type="text" class="form-control shadow-none" placeholder="Digite sua mensagem..." aria-label="Search...">
+                                  <i id="send-message" class="bx bxs-send fs-3 lh-0 cursor-pointer text-white"></i>
                                 </div>
                               </div>
-                              <!-- /Search -->
+                              <!-- Envio de mensagem -->
                             </div>
                           </nav>
                       </div>

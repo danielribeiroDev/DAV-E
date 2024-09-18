@@ -83,6 +83,70 @@ a , h5 , h6 , strong {
     border: 1px solid var(--cordotexto);
 }
 
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    max-width: 60%;
+    word-wrap: break-word;
+  }
+  
+  
+  .user-message {
+    background: transparent;
+    border: 1px solid #fff;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+    border-radius: 10px 10px 0 10px;
+  }
+
+  .bot-message {
+    background-color: black; 
+    color: white;
+    align-self: flex-start;
+    text-align: left;
+    margin-right: auto;
+    border: 1px solid white;
+    border-radius: 10px 10px 10px 0; 
+  }
+  
+  #message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+
+  .bot-message::before {
+    content: 'Assistente:';
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: white;
+  }
+
+  #send-message:hover{
+    color: #000;
+    padding-left: 10px;
+    transition: 0.3s;
+  }
+
+  .btnupload:hover{
+    padding-bottom: 10px;
+    transition: 0.3s;
+  }
+  
+  #chat-input{
+    margin: 0 1rem 0 1rem;
+    width: 80em;
+    border: 1px solid #fff;
+    background-color: var(--cordefundo);
+    color: #fff;
+  }
+  
 
 
 
