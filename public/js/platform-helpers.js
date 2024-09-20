@@ -27,6 +27,20 @@ async function postPackage({ route, body }) {
     return payload
 }
 
+async function getImage({ route, body }) {
+    const response = await fetch(`${host}${route}`, {
+        body: JSON.stringify(body),
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json' // Define o tipo de conteúdo como JSON
+        },
+    })
+
+    const blob = await response.blob()
+    const imgUrl = URL.createObjectURL(blob)
+    return { imgUrl }
+}
+
 async function getPackage(route) {
     showLoading()
     const response = await fetch(`${host}${route}`, {

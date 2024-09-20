@@ -1,3 +1,5 @@
+
+///:: handle the relational db interface - relative to collection operations
 export default class rCollectionRepository {
     constructor({ db }) {
         this.db = db,
@@ -26,10 +28,10 @@ export default class rCollectionRepository {
         }
     }
 
-    async addFile({ collectionId, date, description, purpose , name}) {
+    async addFile({ collectionId, date, description, name}) {
         const createFileQuery = `
-            INSERT INTO files (collection_id, date, description, purpose, name)
-            VALUES ($1, $2, $3, $4, $5)
+            INSERT INTO files (collection_id, date, description, name)
+            VALUES ($1, $2, $3, $4)
             RETURNING *;
         `
         try {

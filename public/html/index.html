@@ -1,328 +1,164 @@
 <!DOCTYPE html>
-
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
-<html
-  lang="pt-br"
-  class="light-style layout-menu-fixed"
-  dir="ltr"
-  data-theme="theme-default"
-  data-assets-path="../assets/"
-  data-template="vertical-menu-template-free"
->
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
-
-    <title>Dav-e - Analytics </title>
-
-    <meta name="description" content="" />
-
-    <!-- Favicon -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/landingpage.css">
+    <title>Dav-e</title>
+</head>
+<body>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+<header class="bg-black d-flex  justify-content-between">
+    <div class="textos-nav m-3 d-flex">
+    <a href="index.html"><img src="../assets/img/icons/brands/logo dav-e.png" alt="logo dav-e" class="logodave"> </a>
+    </div>  
+    <div class=" textos-nav d-flex m-3">
+        <a href="/html/collections.html"><button class="btn rounded-5 border text-light px-3 botaodeacesso">Acessar área do consultor</button> </a>
+    </div>
+</header>
 
-    <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+<section class="banner vh-100 d-flex">
+    <p class="texto-banner text-light d-flex align-items-start justify-content-center flex-column ms-5">Transformando o suporte da sua empresa com <br> <strong class="ms-4">TECNOLOGIA</strong> </p>
+</section>
 
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../assets/css/demo.css" />
+<section class="apresentacao text-light d-flex justify-content-center align-items-center gap-5">
+    <div class="texto1">
+        <h3 class="fw-bold fs-1">Afinal, o que é o Dave?</h3>
+        <p class="mt-3 fs-5">Ele é um assistente de suporte técnico e funcional <br> sempre à disposição do seu time</p>
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/r64Y704k8oY?si=Wui8UxHlrH8qL7nv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</section>
 
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+<section class="apresentacao text-light d-flex justify-content-center align-items-center gap-5 flex-row-reverse">
+    <div class="texto2">
+        <h3 class="fw-bold fs-1"> E como ele pode me ajudar?</h3>
+        <p class="mt-3 fs-5">Auxiliando seus consultores sempre que precisarem, sanando dúvidas <br>e sugerindo as melhores abordagens</p>
+    </div>
+    <div>
+        <!-- wireframe -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GtL1huin9EE?si=qtdbA2ZKpqwW2WQ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</section>
 
-    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+<section class="beneficios text-light mt-5 p-3">
+    <h3 class="fw-bold text-center fs-1 mt-5"> Benefícios: </h3>
+    <div class="cards d-flex mt-5 gap-5 p-5">
+        <div class="card1 d-flex flex-column p-2">
+            <img src="../assets/img/icons/brands/reaction happy.svg" class="emoji" alt="Emoji feliz">
+            <h4 class="text-center mt-3 mb-3">Atendimento rápido e disponível:</h4>
+            <p class="text-center">Dav-e pode fornecer suporte imediato a qualquer momento, garantindo que os clientes obtenham respostas e resolvam problemas fora do horário de expediente, o que melhora a satisfação do cliente.</p>
+        </div>
 
-    <!-- Page CSS -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
+        <div class="card2 d-flex flex-column p-2">
+            <img src="../assets/img/icons/brands/agente de suporte.svg" class="emoji" alt="Emoji feliz">
+            <h4 class="text-center mt-3 mb-3">Resolução personalizada de problemas:</h4>
+            <p class="text-center">Dav-e permite que cada consultor customize seu assistente, com seus arquivos e dados próprios, promovendo uma melhor abordagem para setores problemas específicos.</p>
+        </div>
 
-    <!-- Platform -->
-     <script src="../js/platform-helpers.js"></script>
-     <script src="../js/platform.js"></script>
+        <div class="card3 d-flex flex-column p-2">
+            <img src="../assets/img/icons/brands/data.svg" class="emoji" alt="Emoji feliz">
+            <h4 class="text-center mt-3 mb-3">Análise preditiva e agilização de de tarefas:</h4>
+            <p class="text-center">Dav-e é capaz de aprender e gerar logs com dados históricos e chamados já solucionados, além de facilitar resoluções simples, agilizando o fluxo de trabalho.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Helpers -->
-    <script src="../assets/vendor/js/helpers.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
+<section class="FAQ text-light p-5">
+    <h3 class="fw-bold text-center fs-1 mt-5 mb-5"> FAQ: </h3>
 
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../assets/js/config.js"></script>
-  </head>
-
-  <body>
-    <!-- Layout wrapper -->
-    <div class="layout-wrapper layout-content-navbar">
-      <div class="layout-container">
-        <!-- Menu -->
-
-        <aside id="layout-menu" class="layout-menu menu-lateral">
-          <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link text-white">
-              <img src="../assets/img/avatars/svg do dav-e.svg" class="fotodave">
-              <span class="app-brand-text demo menu-text fw-bolder ms-3">Dav-E</span>
-            </a>
-
-            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-              <i class="bx bx-chevron-left bx-sm align-middle"></i>
-            </a>
+    <div class="accordion mx-auto" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Como o Dav-e pode melhorar o suporte ao cliente?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Ele pode otimizar o suporte ao cliente de diversas maneiras. Primeiramente, assistentes virtuais e chatbots com IA podem responder a perguntas comuns e resolver problemas simples de forma imediata, reduzindo o tempo de espera e garantindo atendimento 24/7. Além disso, sistemas de IA podem aprender com interações anteriores e adaptar suas respostas, proporcionando uma experiência mais personalizada. Outro benefício é que, ao lidar com tarefas repetitivas, a IA permite que agentes humanos foquem em problemas mais complexos, melhorando a eficiência geral.
+            </div>
           </div>
-
-          <div class="menu-inner-shadow"></div>
-
-          <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item active">
-              <a href="index.html" class="d-flex position-relative ms-3 align-items-center p-3 menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Analytics">Arquivos e coleções</div>
-              </a>
-            </li>
-
-            <!-- Layouts -->
-            <li class="menu-item">
-              <a href="/html/assistants.html" class="d-flex position-relative ms-3 p-3 menu-link">
-                <i class="menu-icon tf-icons bx bx-ghost"></i>
-                <div data-i18n="Layouts">Assistentes</div>
-              </a>
-            </li>
-
-            <li class="menu-item">
-              <a href="/html/chat.html" class="d-flex position-relative ms-3 p-3 menu-link">
-                <i class="menu-icon tf-icons bx bx-support"></i>
-                <div data-i18n="Layouts">Chat</div>
-              </a>
-            </li>
-            <!-- Misc -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text menu-link">Misc</span></li>
-            <li class="menu-item">
-              <a
-                href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                target="_blank"
-                class="menu-link"
-              >
-                <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">Documentation</div>
-              </a>
-            </li>
-          </ul>
-        </aside>
-        <!-- / Menu -->
-
-        <!-- Layout container -->
-        <div class="layout-page">
-          <!-- Navbar -->
-          <!-- / Navbar -->
-
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
-            <!-- Content -->
-
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row h-100">
-                <!-- Transactions -->
-                <div class="col-md-6 col-lg-4 order-1 mb-4 h-100">
-                  <div class="card h-100 colecoes">
-                    <div class="card-header d-flex align-items-center justify-content-between">
-                      <h5 class="card-title m-0 me-2">Coleções                      
-                         <button type="button" class="btn btn-xs rounded-pill btn-icon btn-secondary ms-3" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span>A collection is a group of files that serve a certain purpose.</span>">
-                          <i class='bx bx-question-mark' style='color:#ffffff'  ></i>
-                      </button>   </h5>
-                    </div>
-                    <div class="card-body overflow-auto text-light">
-                      <ul id="collection-list" class="p-0 m-0 text-light">
-                      </ul>
-                      </button>
-                    </div>
-                    <div class="card-footer text-center">
-                      <button id="" type="button" class="btn botao border" data-bs-toggle="modal" data-bs-target="#modal-collections">
-                        <span class="tf-icons bx bx-plus"></span>&nbsp; Criar coleção
-                      </button>
-                      <div class="modal fade" id="modal-collections" tabindex="-1" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content cor-modal">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="modal-collections-title"></h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              <div class="row">
-                                <div class="col mb-3">
-                                  <label for="collection-name" class="form-label text-white fs-5">Nome da coleção</label>
-                                  <input type="text" id="collection-name" class="form-control input-colecao" placeholder="Enter name">
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col mb-3">
-                                  <label for="collection-description" class="form-label text-white fs-5">Descrição da coleção</label>
-                                  <input type="text" id="collection-description" class="form-control input-colecao" placeholder="Enter description">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                Close
-                              </button>
-                              <button id="create-collection" type="submit" class="btn btn-primary botao-criar">Criar</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--/ Transactions -->
-
-                <div class="col-md-8 col-lg-8 order-2 mb-4 h-100">
-                    <div class="card h-100 colecoes">
-                      <div class="card-header">
-                        <h5 class="card-title m-0 me-2">Arquivos
-                          <button type="button" class="btn btn-xs rounded-pill btn-icon btn-secondary ms-3" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span>A collection is a group of files that serve a certain purpose.</span>">
-                            <i class="bx bx-question-mark" style="color:#ffffff"></i>
-                        </button>
-                        </h5>
-
-                      </div>
-                      <div class="card-body overflow-auto">
-                        <div class="table-responsive text-nowrap">
-                          <table class="table table-borderless">
-                            <thead>
-                              <tr>
-                                <th>Arquivo</th>
-                                <th>Id</th>
-                                <th>Uploaded</th>
-                                <th>Ações</th>
-                              </tr>
-                            </thead>
-                            <tbody id="file-table" data-refered-collection-uuid="">
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="card-footer text-center">
-                        <button type="button" class="btn botao border" data-bs-toggle="modal" data-bs-target="#modal-files">
-                          <span class="tf-icons bx bx-plus"></span>&nbsp; Adicionar arquivo
-                        </button>
-                        <div class="modal fade" id="modal-files" tabindex="-1" style="display: none;" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content colecoes">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="modal-filesTitle"></h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body" style="text-align: left;">
-                                <div class="col mb-3">
-                                  <div class="row  g-2">
-                                    <label for="file" class="form-label text-light">Seu arquivo</label>
-                                    <input class="form-control input-colecao" type="file" id="file">
-                                  </div>
-                                </div>
-                                <div class="row  g-2">
-                                  <div class="col mb-3">
-                                    <label for="file-description" class="form-label text-light">Descrição</label>
-                                    <input type="text" id="file-description" class="form-control input-colecao" placeholder="File contains information about finance process at last year . . . ">
-                                  </div>
-                                </div>
-                                <div class="row g-2">
-                                  <div class="col mb-0">
-                                    <label for="file-purpose" class="form-label text-light">Propósito</label>
-                                    <input type="text" id="file-purpose" class="form-control input-colecao" placeholder="Provide information about finance process . . . ">
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                  Fechar
-                                </button>
-                                <button id="add-file" type="button" class="btn btn-primary botao-criar">Anexar</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                O Dav-e pode substituir completamente os humanos no suporte técnico?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Embora seja extremamente eficaz na automação de tarefas e na resolução de problemas comuns, ele não pode substituir totalmente os humanos no suporte técnico. Muitas situações complexas ou que exigem empatia, julgamento ou compreensão emocional ainda necessitam de intervenção humana. A melhor abordagem é um modelo híbrido, onde o Dav-e lida com consultas simples e repetitivas, e os agentes humanos se concentram em casos que exigem maior expertise ou interação personalizada.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Como o Dav-e lida com a privacidade dos dados dos clientes?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Como qualquer tecnologia que lida com dados, ele deve seguir rigorosos protocolos de segurança para proteger a privacidade dos clientes. As empresas que o utilizam precisam garantir que os dados sejam criptografados e que a coleta e o processamento de informações sigam normas legais, como o GDPR ou a LGPD. Além disso, nosso sistema é projetados para anonimizar ou agregar dados, reduzindo os riscos de exposição de informações pessoais. Uma boa prática é informar os clientes sobre como seus dados são usados e dar a eles controle sobre o que pode ou não ser compartilhado.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                O Dav-e pode escalar facilmente o atendimento ao cliente
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Sim, o Dav-e é altamente escalável no atendimento ao cliente. Diferentemente do atendimento humano, que exige contratação e treinamento de novos agentes conforme a demanda cresce, a IA pode lidar com um volume crescente de interações simultâneas sem perda de eficiência. Chatbots e assistentes virtuais, por exemplo, podem atender milhares de solicitações ao mesmo tempo, o que permite à empresa expandir seu suporte sem aumento significativo de custo ou infraestrutura. Essa escalabilidade é especialmente útil em momentos de pico de demanda ou durante expansões rápidas de mercado.
               </div>
             </div>
-            <!-- / Content -->
-
-            <!-- Footer -->
-            <footer class="content-footer footer text-center text-white">
-              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                <div class="mb-2 mb-md-0">
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  , made with ❤️ by
-                  <a href="#" target="_blank" class="footer-link fw-bolder">Dv Tech</a>
-                </div>
-                <div>
-                  <a href="#" class="footer-link me-4" target="_blank">Link</a>
-                  <a href="#" target="_blank" class="footer-link me-4">Link</a>
-                </div>
-              </div>
-            </footer>
-            <!-- / Footer -->
-
-            <div class="content-backdrop fade"></div>
           </div>
-          <!-- Content wrapper -->
+      </div>
+</section>
+
+<section class="sobrenos mt-5 p-3 text-light">
+    <h3 class="fw-bold text-center fs-1 mt-5 mb-5"> Sobre nós: </h3>
+    <p class="text-light text-center fs-5">A DV Tech é uma empresa acadêmica fundada em 2024, com o objetivo de oferecer soluções inovadoras e tecnológicas para atender às demandas dos trabalhos e projetos acadêmicos. Focada em áreas como desenvolvimento de software, inteligência artificial e automação de processos, a DV Tech se destaca por sua capacidade de integrar novas tecnologias e ferramentas de forma prática e eficiente, contribuindo para o sucesso acadêmico e profissional de seus integrantes e parceiros.</p>
+
+
+    <div class="dvtech d-flex justify-content-center flex-column align-items-center p-4">
+        
+        <div class="owner d-flex gap-5 align-items-center">
+            <img src="../assets/img/icons/brands/niel.jpg" alt="Foto Daniel" class="foto">
+            <div class="descricao text-light">
+                <h4>Daniel Dias Ribeiro</h4>
+                <p class="mt-3">Estudante do primeiro ano de engenharia de Software na FIAP e co-founder da DV Tech</p>
+            </div>
         </div>
-        <!-- / Layout page -->
-      </div>
 
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
+        <div class="owner d-flex flex-row-reverse gap-5 align-items-center">
+            <img src="../assets/img/icons/brands/victor.jpg" alt="Foto Daniel" class="foto">
+            <div class="descricao text-light">
+                <h4>Victor Hugo Porfirio</h4>
+                <p class="mt-3">Estudante do primeiro ano de engenharia de Software na FIAP e co-founder da DV Tech</p>
+            </div>
+        </div>
     </div>
+</section>
 
-    <div id="loading-overlay">
-      <div class="spinner-border spinner-border-lg text-primary" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-    </div>    
+<footer class="mt-5 bg-black p-1">
+    <p class="text-center text-light mt-3">Powered by DV Tech | FIAP x Sofftek </p>
+</footer>
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
 
-    <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
-
-    <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-  </body>
+       
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>

@@ -15,22 +15,23 @@
         networks:
           - postgres
         restart: unless-stopped
-    
-      pgadmin:
-        image: dpage/pgadmin4
-        environment:
-          PGADMIN_DEFAULT_EMAIL: admin@email.com
-          PGADMIN_DEFAULT_PASSWORD: ADMIN
-        ports:
-          - "8081:80"
-        depends_on:
-          - postgres
-        networks:
-          - postgres
-    
+
+    chroma:
+      image: chromadb/chroma
+      ports:
+        - "8000:8000"
+      volumes:
+        - chroma:/data/chroma
+      networks:
+        - chroma
+      restart: unless-stopped
+
     networks:
       postgres:
         driver: bridge
+      chroma:
+         driver: bridge
     
     volumes:
         postgres:
+        chroma:

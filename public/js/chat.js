@@ -132,7 +132,7 @@ async function setActiveChat(e) {
         const userMessage = inputField.value;
         if (userMessage.trim() !== "") {
             // Exibe a mensagem do usuário na direita
-            appendMessage(userMessage, 'user-message');
+            appendMessage({ message: userMessage, messageType: 'user-message' });
             
             // Enviar a mensagem para o chatbot e exibir a resposta
             getChatbotResponse(userMessage);
@@ -153,20 +153,58 @@ async function setActiveChat(e) {
     });
 
     // adicionar mensagens no chat
-    function appendMessage(message, messageType) {
+    function appendMessage({ message, messageType }) {
         const messageElement = document.createElement('div');
         messageElement.classList.add('message', messageType);
-        messageElement.textContent = message;
+        messageElement.innerHTML = message;
         messageContainer.appendChild(messageElement);
         messageContainer.scrollTop = messageContainer.scrollHeight; // Scroll 
     }
 
     // Depois integra com a API
-    function getChatbotResponse(userMessage) {
+    async function getChatbotResponse(userMessage) {
         // placeholder
+        /*
         setTimeout(function() {
             const botResponse = "Lorem ipsum"; // Placeholder
             appendMessage(botResponse, 'bot-message');
         }, 1000);
+        */
+        const payload = await postPackage({ route: 'chat/message', body: {
+            chat: {
+                id: document.querySelector('#chat-list .active .menu-link').dataset.uuid,
+                question: userMessage
+            }
+        } })
+
+        const formated = await formatMessage({
+            message: payload.answer,
+            relativeImages: payload.relativeImages
+        })
+
+        appendMessage({
+            message: formated,
+            messageType: 'bot-message'
+        })
+    }
+
+    async function formatMessage({ message, relativeImages }) {
+        const replaced = message.replaceAll('\n', '<br>')
+        
+        let formated = replaced
+        for(let obj of relativeImages) {
+            const response = await getImage({ 
+                route: 'file', 
+                body: {
+                    path: obj.source
+                }
+            })
+            const element = `<img src=${response.imgUrl} style="max-height: 400px; margin: 25px 0px; display: block;">`
+
+            const sliced = formated.slice(0, formated.indexOf('<br>', obj.line) + 4) + element + formated.slice(formated.indexOf('<br>', obj.line) + 4);
+
+            formated = sliced
+        }
+        return formated
     }
 });

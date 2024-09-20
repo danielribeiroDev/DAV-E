@@ -13,7 +13,7 @@
  -->
 <!-- beautify ignore:start -->
 <html
-  lang="en"
+  lang="pt-br"
   class="light-style layout-menu-fixed"
   dir="ltr"
   data-theme="theme-default"
@@ -27,7 +27,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dav-e | Assistants</title>
+    <title>Dav-e - Analytics </title>
 
     <meta name="description" content="" />
 
@@ -56,11 +56,11 @@
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
-     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 
     <!-- Platform -->
-     <script src="../js/platform-helpers.js" ></script>
-     <script src="../js/assistants.js" ></script>
+     <script src="../js/platform-helpers.js"></script>
+     <script src="../js/collections.js"></script>
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
@@ -79,7 +79,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-lateral">
           <div class="app-brand demo">
-            <a href="/html/collections.html" class="app-brand-link">
+            <a href="/html/collections.html" class="app-brand-link text-white">
               <img src="../assets/img/avatars/svg do dav-e.svg" class="fotodave">
               <span class="app-brand-text demo menu-text fw-bolder ms-3">Dav-E</span>
             </a>
@@ -93,29 +93,29 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item">
-              <a href="/html/collections.html" class="menu-link">
+            <li class="menu-item active">
+              <a href="/html/collections.html" class="d-flex position-relative ms-3 align-items-center p-3 menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Analytics">Arquivos e coleções</div>
               </a>
             </li>
 
             <!-- Layouts -->
-            <li class="menu-item active">
-              <a href="#" class="menu-link">
+            <li class="menu-item">
+              <a href="/html/assistants.html" class="d-flex position-relative ms-3 p-3 menu-link">
                 <i class="menu-icon tf-icons bx bx-ghost"></i>
                 <div data-i18n="Layouts">Assistentes</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="/html/chat.html" class="menu-link">
+              <a href="/html/chat.html" class="d-flex position-relative ms-3 p-3 menu-link">
                 <i class="menu-icon tf-icons bx bx-support"></i>
                 <div data-i18n="Layouts">Chat</div>
               </a>
             </li>
             <!-- Misc -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text menu-link">Misc</span></li>
             <li class="menu-item">
               <a
                 href="https://github.com/danielribeiroDev/DAV-E"
@@ -145,21 +145,21 @@
                 <div class="col-md-6 col-lg-4 order-1 mb-4 h-100">
                   <div class="card h-100 colecoes">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                      <h5 class="card-title m-0 me-3">Assistentes<button type="button" class="btn btn-xs rounded-pill btn-icon btn-secondary mx-3" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span>A collection is a group of files that serve a certain purpose.</span>">
+                      <h5 class="card-title m-0 me-2">Coleções                      
+                         <button type="button" class="btn btn-xs rounded-pill btn-icon btn-secondary ms-3" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span>Uma coleção é um grupo de arquivos que contém informações sobre temas similares. Você pode utiliza-la como base de dados para os assistentes que criar</span>">
                           <i class='bx bx-question-mark' style='color:#ffffff'  ></i>
-                      </button></h5>
+                      </button>   </h5>
                     </div>
-                    <div class="card-body overflow-auto">
-                      <ul id="assistant-list" class="p-0 m-0">
-
+                    <div class="card-body overflow-auto text-light">
+                      <ul id="collection-list" class="p-0 m-0 text-light">
                       </ul>
                       </button>
                     </div>
                     <div class="card-footer text-center">
-                      <button id="" type="button" class="btn botao border" data-bs-toggle="modal" data-bs-target="#modal-assistants">
-                        <span class="tf-icons bx bx-plus"></span>&nbsp; Criar Assistente
+                      <button id="" type="button" class="btn botao border" data-bs-toggle="modal" data-bs-target="#modal-collections">
+                        <span class="tf-icons bx bx-plus"></span>&nbsp; Criar coleção
                       </button>
-                      <div class="modal fade" id="modal-assistants" tabindex="-1" style="display: none;" aria-hidden="true">
+                      <div class="modal fade" id="modal-collections" tabindex="-1" style="display: none;" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content cor-modal">
                             <div class="modal-header">
@@ -169,22 +169,22 @@
                             <div class="modal-body">
                               <div class="row">
                                 <div class="col mb-3" style="text-align: justify;">
-                                  <label for="assistant-name" class="form-labeld text-light">Nome do assistente</label>
-                                  <input type="text" id="assistant-name" class="form-control input-colecao" placeholder="Jarvis . . . ">
+                                  <label for="collection-name" class="form-label text-light">Nome da coleção</label>
+                                  <input type="text" id="collection-name" class="form-control input-colecao" placeholder="Manual do software Exemplo . . .">
                                 </div>
                               </div>
                               <div class="row">
                                 <div class="col mb-3" style="text-align: justify;">
-                                  <label for="assistant-description" class="form-label text-light">Descrição do assistente</label>
-                                  <input type="text" id="assistant-description" class="form-control input-colecao" placeholder="Especialista SAP . . . ">
+                                  <label for="collection-description" class="form-label text-light">Descrição da coleção</label>
+                                  <input type="text" id="collection-description" class="form-control input-colecao" placeholder="Informações sobre funcionalidades e processos do software Exemplo . . . ">
                                 </div>
                               </div>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                Fechar
+                                Close
                               </button>
-                              <button id="create-assistant" type="submit" class="btn btn-primary botao-criar">Criar</button>
+                              <button id="create-collection" type="submit" class="btn btn-primary botao-criar">Criar</button>
                             </div>
                           </div>
                         </div>
@@ -197,8 +197,8 @@
                 <div class="col-md-8 col-lg-8 order-2 mb-4 h-100">
                     <div class="card h-100 colecoes">
                       <div class="card-header">
-                        <h5 class="card-title m-0 me-2">Coleções
-                          <button type="button" class="btn btn-xs rounded-pill btn-icon btn-secondary ms-3" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span>A collection is a group of files that serve a certain purpose.</span>">
+                        <h5 class="card-title m-0 me-2">Arquivos
+                          <button type="button" class="btn btn-xs rounded-pill btn-icon btn-secondary ms-3" data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title="" data-bs-original-title="<span>Arquivos são documentos que contém informações sobre algum tema. Um arquivo deve ser um documento de imagem, PDF, TXT ou CSV. </span>">
                             <i class="bx bx-question-mark" style="color:#ffffff"></i>
                         </button>
                         </h5>
@@ -209,22 +209,22 @@
                           <table class="table table-borderless">
                             <thead>
                               <tr>
-                                <th>Coleções</th>
+                                <th>Arquivo</th>
                                 <th>Id</th>
+                                <th>Uploaded</th>
                                 <th>Ações</th>
                               </tr>
                             </thead>
-                            <tbody id="collection-table" data-refered-assistant-uuid="">
-
+                            <tbody id="file-table" data-refered-collection-uuid="">
                             </tbody>
                           </table>
                         </div>
                       </div>
                       <div class="card-footer text-center">
-                        <button id="attach-collection-button" type="button" class="btn botao border" data-bs-toggle="modal" data-bs-target="#modal-collections">
-                          <span class="tf-icons bx bx-plus"></span>&nbsp; Anexar coleção
+                        <button type="button" class="btn botao border" data-bs-toggle="modal" data-bs-target="#modal-files">
+                          <span class="tf-icons bx bx-plus"></span>&nbsp; Adicionar arquivo
                         </button>
-                        <div class="modal fade" id="modal-collections" tabindex="-1" style="display: none;" aria-hidden="true">
+                        <div class="modal fade" id="modal-files" tabindex="-1" style="display: none;" aria-hidden="true">
                           <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content colecoes">
                               <div class="modal-header">
@@ -232,34 +232,24 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body" style="text-align: left;">
-                                <div id="available-collections" class="list-group text-light">
-                                  <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="">
-                                    lorem
-                                  </label>
-                                  <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="">
-                                    ipsum
-                                  </label>
-                                  <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="">
-                                    lorem
-                                  </label>
-                                  <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="">
-                                    ipsum
-                                  </label>
-                                  <label class="list-group-item">
-                                    <input class="form-check-input me-1" type="checkbox" value="">
-                                    lorem
-                                  </label>
+                                <div class="col mb-3">
+                                  <div class="row  g-2">
+                                    <label for="file" class="form-label text-light">Seu arquivo</label>
+                                    <input class="form-control input-colecao" type="file" id="file">
+                                  </div>
+                                </div>
+                                <div class="row  g-2">
+                                  <div class="col mb-3">
+                                    <label for="file-description" class="form-label text-light">Descrição</label>
+                                    <input type="text" id="file-description" class="form-control input-colecao" placeholder="Instruções de uso do software Example. . . ">
+                                  </div>
                                 </div>
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                  Close
+                                  Fechar
                                 </button>
-                                <button id="attach-collection" type="button" class="btn btn-primary botao-criar">Anexar</button>
+                                <button id="add-file" type="button" class="btn btn-primary botao-criar">Anexar</button>
                               </div>
                             </div>
                           </div>
@@ -272,7 +262,7 @@
             <!-- / Content -->
 
             <!-- Footer -->
-            <footer class="content-footer footer text-center text-white"></footer>
+            <footer class="content-footer footer text-center text-white">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
                 <div class="mb-2 mb-md-0">
                   ©
@@ -305,7 +295,7 @@
       <div class="spinner-border spinner-border-lg text-primary" role="status">
         <span class="visually-hidden">Loading...</span>
       </div>
-    </div>  
+    </div>    
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

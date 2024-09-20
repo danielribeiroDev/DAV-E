@@ -1,3 +1,5 @@
+
+///:: handle the vectorial db interface - relative to collection operations
 export default class vCollectionRepository {
     constructor({ provider, url, hnsw_space, embeddingHanldeObject }) {
         this.provider = provider,
@@ -16,11 +18,13 @@ export default class vCollectionRepository {
         })
     }
 
-    async get({ id }) {
+    async get({ id, filter = {} }) {
         const vcollection =  await this.provider.fromExistingCollection(
             this.embeddingHanldeObject,
             {
-                collectionName: id  
+                collectionName: id,
+                filter: filter
+                  
             }
         )
 

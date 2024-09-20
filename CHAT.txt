@@ -1,8 +1,0 @@
-- Um chat deve ter um agente
-- Cada agente esta relacionado a uma ou mais coleções - base de vetores
-
-- Para conseguir criar um agente, eu preciso carregar as coleções relacionadas a ele
-e criar uma tool para cada coleção - a descrição do uso da tool será a descrição passada pelo
-usuário quando criou a collection.
-
-- 
