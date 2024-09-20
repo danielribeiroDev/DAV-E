@@ -11,6 +11,8 @@ You can simply create an specialist in a determined area to help you in any situ
 
 - **Learning & Adaptation** *(In Development)*: The assistant learns continuously from its interactions, improving by recognizing mistakes and gaining insights over time.
 
+- **Insight Maker** *(In Development)*: The application analyse your chat history and provide helpful insights to you.
+
 ## Built with:
 
 - **[LangChain.js](https://js.langchain.com/v0.2/docs/introduction/)**: The project utilizes the LangChain.js library to simplify interactions with Large Language Models (LLMs), making it easier to build intelligent assistants.
@@ -23,8 +25,8 @@ You can simply create an specialist in a determined area to help you in any situ
 
 ## For the Future . . .
 - API RESTFUL for integrations with another systems. 
-- Make assistants more smart with better RAG approachs.
 - Multi-assistants feature, that allow chat with more than one assistant at the same time.
+- Make assistants more smart with better RAG approachs.
 - Implement any king of media retriever like video and audio to render in our chats.
 - . . .  sorry, i'm so tired to complete that list now.
 
