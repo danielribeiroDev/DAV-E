@@ -170,7 +170,6 @@ const addFile = async (e, modalFiles) => {
     appendHtml("file-table", filledTemplate)
 
     fileDescription.value = ''
-    filePurpose.value = ''
     fileInput.value = ''
     modalFiles.hide()
 }

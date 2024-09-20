@@ -35,7 +35,7 @@ export default class rCollectionRepository {
             RETURNING *;
         `
         try {
-            const result = await this.db.query(createFileQuery, [collectionId, date || new Date(), description, purpose, name])
+            const result = await this.db.query(createFileQuery, [collectionId, date || new Date(), description, name])
             return result.rows[0];
         } catch(error) {
             console.error('Erro ao criar a coleção:', error);

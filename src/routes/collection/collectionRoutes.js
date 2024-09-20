@@ -20,7 +20,7 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     req.file = file
-    cb(null, join(currentDir, '..', '..', '/storage/files'))
+    cb(null, join(currentDir, '..', '..', '..', '/storage/files'))
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname)
