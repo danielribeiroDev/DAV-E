@@ -73,7 +73,7 @@ a , h5 , h6 , strong {
     box-shadow: none;
 }
 
-.list-group-item{
+.list-group-item, #assistant-name, #assistant-description{
     color: var(--cordotexto);
 }
 
@@ -147,6 +147,23 @@ a , h5 , h6 , strong {
     color: #fff;
   }
   
+  #assistant-name, #assistant-description{
+    color: #fff;
+  }
 
+
+.menu-item.active {
+  color: white; 
+  border-left: 5px solid white; 
+  transition: 0.3s;
+}
+
+
+.menu-item.active .menu-link {
+  color: white;
+}
+
+
+  
 
 

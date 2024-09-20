@@ -1,18 +1,16 @@
-
-var modalAssistant
+var modalAssistant;
 document.addEventListener("DOMContentLoaded", async function() {
-    modalAssistant = new bootstrap.Modal('#modal-assistants')
+    modalAssistant = new bootstrap.Modal('#modal-assistants');
     ///:: New chat event
     document.querySelector('#new-chat').addEventListener('click', e => {
-        fillAssistantsModal(modalAssistant)
-    })
+        fillAssistantsModal(modalAssistant);
+    });
 
-    initChatList()
+    initChatList();
+});
 
- })
-
- async function fillAssistantsModal() {
-    document.querySelector('#assistant-list').innerHTML = ''
+async function fillAssistantsModal() {
+    document.querySelector('#assistant-list').innerHTML = '';
     const template = 
     `
      <li class="col mb-3">
@@ -20,37 +18,36 @@ document.addEventListener("DOMContentLoaded", async function() {
         <span class="tf-icons bx bx-ghost"></span>&nbsp; {assistant-name}
         </button>
     </li>
-    `
+    `;
 
-    let content = ``
-    const payload = await getPackage('assistants')
+    let content = ``;
+    const payload = await getPackage('assistants');
     payload.assistants.forEach(assistant => {
         let replacements = {
             "{assistant-name}": assistant.name,
             "{uuid}": assistant.id
-        }
+        };
 
-        let filledTemplate = fillTemplate(template, replacements)
-        content += filledTemplate
+        let filledTemplate = fillTemplate(template, replacements);
+        content += filledTemplate;
     });
 
-    appendHtml('assistant-list', content)
+    appendHtml('assistant-list', content);
 
-    ///:: Capture event when user choose an assistant, send to server and reload the assistant-list
-    document.querySelectorAll('#assistant-list button').forEach( button =>  {
-        createChatHandle(button, )
-    })
+    ///:: Capture event when user chooses an assistant, send to server and reload the assistant-list
+    document.querySelectorAll('#assistant-list button').forEach(button =>  {
+        createChatHandle(button, modalAssistant);
+    });
+}
 
- }
-
- function createChatHandle(button, modal) {
+function createChatHandle(button, modal) {
     button.addEventListener('click', async e => {
         const payload = await postPackage({ 
             route: 'chat',
             body: {
                 assistantId: e.target.dataset.uuid,
             }
-        })
+        });
 
         const template = 
         `
@@ -59,70 +56,90 @@ document.addEventListener("DOMContentLoaded", async function() {
             <div>{chat-name}</div>
             </div>
         </li>
-        `
+        `;
 
         const replacements = {
             "{chat-name}": payload.name,
             "{uuid}": payload.id
-        }
+        };
 
-        const filledTemplate = fillTemplate(template, replacements)
+        const filledTemplate = fillTemplate(template, replacements);
 
-        appendHtml('chat-list', filledTemplate)
+        // Adiciona o novo chat à lista
+        appendHtml('chat-list', filledTemplate);
 
-        modalAssistant.hide()
-    })
- }
+        // Fecha o modal dos assistentes
+        modal.hide();
 
- function setupChatList() {
+        // Configura o chat recém-criado como ativo automaticamente
+        setActiveChatById(payload.id);
+    });
+}
+
+async function setActiveChatById(chatId) {
+    // Desativa o chat anterior
+    document.querySelector('#chat-list .active')?.classList.remove('active');
+
+    // Ativa o novo chat com base no ID
+    const newChatElement = document.querySelector(`#chat-list .menu-link[data-uuid="${chatId}"]`);
+    newChatElement.closest('.menu-item').classList.add('active');
+
+    // Carrega as informações do chat
+    const payload = await getPackage(`chat/${chatId}`);
+    document.querySelector('#chat-box-title').innerHTML = payload.chat.name;
+
+    // Carrega a conversa, se houver
+}
+
+function setupChatList() {
     document.querySelectorAll('#chat-list li .menu-link').forEach(a => {
         a.addEventListener('click', e => {
-            setActiveChat(e)
-        })
-    })
- }
+            setActiveChat(e);
+        });
+    });
+}
 
 async function setActiveChat(e) {
     ///:: Disable previous active chat and activate the one that was selected
-    document.querySelector('#chat-list .active')?.classList.remove('active')
+    document.querySelector('#chat-list .active')?.classList.remove('active');
     const currentMenuItem = e.target.closest('.menu-item');
-    currentMenuItem.classList.add('active')
+    currentMenuItem.classList.add('active');
 
     ///:: Get assistant related to chat and adds its name to the chat-box 
-    const payload = await getPackage(`chat/${e.target.dataset.uuid}`)
-    document.querySelector('#chat-box-title').innerHTML = payload.chat.name
+    const payload = await getPackage(`chat/${e.target.dataset.uuid}`);
+    document.querySelector('#chat-box-title').innerHTML = payload.chat.name;
 
     ///:: Carregar conversa caso houver
- }
+}
 
- async function initChatList() {
-    const payload = await getPackage('chat')
+async function initChatList() {
+    const payload = await getPackage('chat');
 
-    let content = ``
+    let content = ``;
     let template = 
     `
     <li class="menu-item">
-        <div href="" class="menu-link" data-uuid="{uuid}">
+        <div href="" class="menu-link ativo" data-uuid="{uuid}">
         <div>{chat-name}</div>
         </div>
     </li>
-    `
+    `;
     payload.chats.forEach(chat => {
         let replacements = {
             "{chat-name}": chat.name,
             "{uuid}": chat.id
-        }
+        };
 
-        let filledTemplate = fillTemplate(template, replacements)
-        content += filledTemplate
+        let filledTemplate = fillTemplate(template, replacements);
+        content += filledTemplate;
     });
 
-    appendHtml('chat-list', content)
+    appendHtml('chat-list', content);
 
-    setupChatList()
- }
+    setupChatList();
+}
 
- document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const inputField = document.querySelector('#chat-input');
     const sendButton = document.querySelector('#send-message');
     const messageContainer = document.getElementById('message-container');
@@ -163,48 +180,45 @@ async function setActiveChat(e) {
 
     // Depois integra com a API
     async function getChatbotResponse(userMessage) {
-        // placeholder
-        /*
-        setTimeout(function() {
-            const botResponse = "Lorem ipsum"; // Placeholder
-            appendMessage(botResponse, 'bot-message');
-        }, 1000);
-        */
-        const payload = await postPackage({ route: 'chat/message', body: {
-            chat: {
-                id: document.querySelector('#chat-list .active .menu-link').dataset.uuid,
-                question: userMessage
+        const payload = await postPackage({ 
+            route: 'chat/message', 
+            body: {
+                chat: {
+                    id: document.querySelector('#chat-list .active .menu-link').dataset.uuid,
+                    question: userMessage
+                }
             }
-        } })
+        });
 
         const formated = await formatMessage({
             message: payload.answer,
             relativeImages: payload.relativeImages
-        })
+        });
 
         appendMessage({
             message: formated,
             messageType: 'bot-message'
-        })
+        });
     }
 
     async function formatMessage({ message, relativeImages }) {
-        const replaced = message.replaceAll('\n', '<br>')
+        const replaced = message.replaceAll('\n', '<br>');
         
-        let formated = replaced
+        let formated = replaced;
         for(let obj of relativeImages) {
             const response = await getImage({ 
                 route: 'file', 
                 body: {
                     path: obj.source
                 }
-            })
-            const element = `<img src=${response.imgUrl} style="max-height: 400px; margin: 25px 0px; display: block;">`
+            });
+            const element = `<img src=${response.imgUrl} style="max-height: 400px; margin: 25px 0px; display: block;">`;
 
             const sliced = formated.slice(0, formated.indexOf('<br>', obj.line) + 4) + element + formated.slice(formated.indexOf('<br>', obj.line) + 4);
 
-            formated = sliced
+            formated = sliced;
         }
-        return formated
+        return formated;
     }
 });
+
