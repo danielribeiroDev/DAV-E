@@ -20,6 +20,8 @@ services:
     image: chromadb/chroma
     ports:
       - "8000:8000"
+    volumes:
+      - chroma:/data/chroma  
     networks:
       - chroma
     restart: unless-stopped
@@ -28,7 +30,8 @@ networks:
   postgres:
     driver: bridge
   chroma:
-      driver: bridge
+    driver: bridge
 
 volumes:
   postgres:
+  chroma:  
