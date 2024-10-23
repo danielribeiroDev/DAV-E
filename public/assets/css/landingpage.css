@@ -1,86 +1,746 @@
 :root{
     --fontetitulos: "Bebas Neue", sans-serif;
-    --cordefundo: #151515;
+    --cordefundo: #000000;
 }
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
+    margin: 0;
+    height: 100%;
     background-color: var(--cordefundo);
-}
+  }
 
-header{
-    border-bottom: 1px solid white;
-}
-
-.logodave{
-    width: 7rem;
-}
-
-.botaodeacesso:hover{
-    background-color: rgb(46, 46, 46);
-    padding: 10px;
-    transition: 0.3s;
-}
+  .titulo, .apresentacao, .utilidades, .card, .quemsomos{
+    animation: fade-up 1s;
+    animation: fade-down 1s;
+  }
 
 
-.banner{
-    background-image: url(../img/backgrounds/banner.svg);
-    background-position: 50%;
-}
+.titulo{
+  padding-top: 12em;
+  font-family: var(--fontetitulos);
+  color: #F6F4F4;
+  
 
-.texto-banner{
-    font-size: 2.6rem;
-}
+  & .texto{
+    font-size: 3em;
+    
+  }
 
-strong{
-    font-size: 16rem;
-    font-family: var(--fontetitulos);
-    margin-top: -0.25em;
+  & .tecnologia{
+    font-size: 17em;
+  }
+
+  & .tecnologia , .texto{
+    background: -webkit-linear-gradient(#ffffff, #6d6d6d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  & .descricao{
+    background: -webkit-linear-gradient(#ffffff, #bbbaba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.3em;
+  }
+
 }
 
 .apresentacao{
-    margin-top: 5rem;
+  background: linear-gradient(#00000000 0% , #000000);
+  margin-top: 12em;
 }
 
-iframe{
-    box-shadow:10px 5px 5px black;
+.whatis{
+  width: 100em
 }
 
-.beneficios, .sobrenos{
-    background-color: black;
-    border-radius: 12px;
+.iahand{
+  width: 40em;
+  border-radius: 60px;
 }
 
-.emoji{
-    height: 3rem;
+.titulo__apresentacao{
+  font-family: var(--fontetitulos);
+}
+
+.texto__container{
+  font-size: 1.3em;
+}
+
+.utilidades{
+  margin-top: 12em;
+  background-color: #000;
+  border-radius: 24px;
+}
+
+.cards__utilidades{
+  border: 1px solid #fff;
+  border-radius: 24px;
+  width: 30em;
+  text-wrap: wrap;
+}
+
+.auxilio__suporte{
+  width: 1.5em;
+}
+
+.texto__Card{
+  margin-top: 1em;
+}
+
+.seta__click{
+  width: 1em;
+}
+
+.card__uso{
+  height: 15em;
+  width: 25em;
+}
+
+.pricing{
+  background-color: #0e0d0d;
+  margin-top: 10em;
+  height: 45em;
 }
 
 
-.accordion-button, .accordion-button:not(.collapsed){
-background-color: #000;
-color: #ffff;
+
+.img__dv{
+  width: 15em;
+  border-radius: 150px;
 }
+
+.social-links,.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  background: rgb(0, 0, 0);
+  margin: 5px;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.social-btn svg {
+  height: 24px;
+  width: 24px;
+}
+
+.social-btn a {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-btn:hover {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.social-btn:hover a {
+  padding: 2px;
+  width: 150px;
+}
+
+
+#linkedin svg {
+  fill: #0e76a8;
+}
+
+#github {
+  fill: #ffffff;
+}
+
+.footer{
+  margin-top: 10em;
+  background-color: #0e0d0d;
+  flex: 1;
+}
+
+
+/* componentes para reaproveitamento */
+
+/* navbar */
+
+.header {
+  background-color: transparent;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #fff;
+  padding: 0.5em;
+  z-index: 1000;
+}
+
+
+.plataforma{
+  border: 1px solid #ffff;
+  border-radius: 60px;
+  width: 16em;
+  background-color: transparent;
+  color: #fff;
+  padding: 0.8em !important;
+}
+
+.plataforma:hover{
+  background-color: #424242;
+  transition: 0.3s;
+}
+
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
   
-
-.button:focus:not(:focus-visible), .button:focus {
-    outline: none;
 }
+
+.header li a {
+  display: block;
+  text-decoration: none;
+}
+
+.logo{
+  width: 5em;
+}
+
+.link{
+  color: #797979;
+}
+
+.link:hover{
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
   
-
-.accordion{
-    width: 40rem;
 }
 
-.foto{
-    width: 10em;
-    border-radius: 100px;
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
 }
 
-.owner{
-    margin-top: 5rem;
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
 }
 
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 760px){
+  .menu{
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .link{
+      border-bottom: 1px solid #fff;
+  }
+
+}
+
+ /* particles */
+ canvas {
+  display: block;
+} 
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+  background-color: #000; 
+}
+
+
+/* botão */
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button {
+  --primary-color: #575656;
+  --hovered-color: #ffffff;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+button p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+button p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "Acessar";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+button:hover::after {
+  width: 100%;
+}
+
+button:hover p::before {
+  width: 100%;
+}
+
+button:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+button svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+/* cards preços */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 20em;
+  padding: 20px 1px;
+  margin: 10px 0;
+  height: 26em;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(238, 238, 238, 0.4),0 4px 6px -4px rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  background-color: #000000;
+  background: linear-gradient(45deg, #000000ea 0%, #181818 100%);
+}
+
+.content {
+  padding: 20px;
+}
+
+.content .price {
+  color: white;
+  font-weight: 800;
+  font-size: 50px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+.content .description {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.content .title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.64);
+  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.botao__card {
+  color: rgb(255 255 255);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  width: 90%;
+  text-shadow: 0px 4px 18px #2c3442;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.64);
+}
+
+.botao__card:hover{
+  padding: 10px;
+  transition: 0.3s;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+/* animações */
+
+@keyframes fade-up{
+  0%{
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-down{
+  0%{
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* media queries */
+
+/* celulares */
+
+@media (min-width: 390px) and (max-width: 757px) {
+  .header{
+    width: 24.5em;
+  }
+
+  .logo{
+    width: 4em;
+  }
+  
+  .titulo{
+    padding-top: 12em;
+    font-family: var(--fontetitulos);
+    color: #F6F4F4;
+    
+    & .texto{
+      font-size: 1.3em;
+      
+    }
+  
+    & .tecnologia{
+      font-size: 5em;
+    }
+  
+    & .descricao{
+      font-size: 1em;
+      width: 22em;
+      margin: 0 auto;
+    }
+
+  }
+
+  .apresentacao{
+    margin-top: 6em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whatis{
+    flex-direction: column;
+    width: 19em;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .texto__apresentacao{
+    width: 20em;
+    margin-left: 0 !important;
+  }
+
+  .iahand{
+    width: 20em;
+    margin-right: 0 !important;
+  }
+
+  .cards1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards__utilidades{
+    width: 20em;
+    text-align: center;
+  }
+
+  .card__uso{
+    height: 16em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pricing{
+    height: 100em;
+  }
+
+  .planos{
+    display: flex;
+    flex-direction: column;
+  }
+
+ .dvtech{
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .textoeicone{
+    width: 20em;
+    text-align: center;
+  }
+
+}
+
+/* telas de tablet 1 */
+
+@media (min-width: 757px) and (max-width: 1193px) {
+ 
+  .header{
+    width: 100%;
+  }
+
+  .logo{
+    width: 4em;
+  }
+  
+  .titulo{
+    padding-top: 12em;
+    font-family: var(--fontetitulos);
+    color: #F6F4F4;
+    
+    & .texto{
+      font-size: 2em;
+      
+    }
+  
+    & .tecnologia{
+      font-size: 8em;
+    }
+  
+    & .descricao{
+      font-size: 2em;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+  }
+
+  .apresentacao{
+    margin-top: 6em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whatis{
+    flex-direction: column;
+    width: 45em;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .texto__apresentacao{
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .iahand{
+    width: 30em;
+    margin-right: 0 !important;
+  }
+
+  .cards1{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards__utilidades{
+    width: 40em;
+    text-align: center;
+  }
+
+  .card__uso{
+    height: 16em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pricing{
+    height: 100em;
+  }
+
+  .planos{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card{
+    width: 40em;
+
+    & .description{
+      font-size: 1.5em;
+    }
+
+    & .botao__card{
+      height: 3em;
+      font-size: 2em;
+    }
+
+  }
+
+ .dvtech{
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .textoeicone{
+    width: 20em;
+    text-align: center;
+  }
+
+
+}
+
+/* Telas de tablet 2 */
+
+@media (min-width: 1184px) and (max-width: 1536px) {    
+ 
+  .texto__apresentacao{
+    width: 100%;
+  }
+
+  }
+
+ 
