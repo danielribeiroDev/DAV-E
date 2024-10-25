@@ -1,4 +1,4 @@
-const host = 'http://177.71.145.74/'
+const host = 'http://localhost:3000/'
 
 function fillTemplate(template, replacements, ) {
     let filledTemplate = template;
