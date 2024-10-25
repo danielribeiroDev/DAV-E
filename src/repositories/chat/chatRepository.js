@@ -9,17 +9,18 @@ export default class ChatRepository {
 
     async create({
         name,
-        id
+        id,
+        userId
     }) {
         const createChatQuery = 
         `
-        INSERT INTO chats (name, assistant_id)
-        VALUES ($1, $2)
+        INSERT INTO chats (name, assistant_id, user_id)
+        VALUES ($1, $2, $3)
         RETURNING *;
         `
 
         try {
-            const result = await this.db.query(createChatQuery, [name, id])
+            const result = await this.db.query(createChatQuery, [name, id, userId])
             return result.rows[0]
         } catch (error) {
             console.error('Erro ao criar chat', error)
@@ -27,14 +28,15 @@ export default class ChatRepository {
         }
     }
 
-    async getAll() {
+    async getAll({ userId }) {
         const getAllQuery = 
         `
         SELECT * FROM chats
+        WHERE $1 = chats.user_id;
         `
 
         try {
-            const result = await this.db.query(getAllQuery)
+            const result = await this.db.query(getAllQuery, [userId])
             return result.rows
         } catch (error) {
             console.error('Erro ao recuperar chat', error)
@@ -62,6 +64,24 @@ export default class ChatRepository {
             return result.rows[0]
         } catch (error) {
             console.error('Erro ao recuperar chat', error)
+            throw error;
+        }
+    }
+
+    async updateChatName({ id, name }) {
+        const updateQuery = 
+        `
+        UPDATE chats
+        SET name = $2
+        WHERE id = $1
+        RETURNING *;
+        `
+
+        try {
+            const result = await this.db.query(updateQuery, [id, name])
+            return result.rows[0]
+        } catch (error) {
+            console.error('Erro ao atualizar chat', error)
             throw error;
         }
     }

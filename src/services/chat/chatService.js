@@ -21,16 +21,17 @@ export default class ChatService {
     ///:: create a chat
     async create({
         name,
-        id
+        id,
+        userId
     }) {
-        const chat = await this.chatRepository.create({ name, id }) 
+        const chat = await this.chatRepository.create({ name, id, userId }) 
         
         return chat
     }
 
     ///:: get all chats
-    async getAll() {
-        return await this.chatRepository.getAll()
+    async getAll({ userId }) {
+        return await this.chatRepository.getAll({ userId })
     }
 
     ///:: get specific chat
@@ -71,8 +72,8 @@ export default class ChatService {
             
             this.memcached.append('chat_history', id, new HumanMessage(result.input))
             this.memcached.append('chat_history', id, new AIMessage(answer))
-            
-            return { answer, relativeImages: relevantImages }
+
+            return { answer, relativeImages: relevantImages, chatName:  await this.updateChatName({ id, question })}
         }
         
         
@@ -112,16 +113,26 @@ export default class ChatService {
         for(let retriever of imageRetrievers) {
             cont++
             const result = await retriever.invoke(question)
-
-            relativeImages.push(
-                {
-                    id: cont,
-                    desc: result[0].pageContent,
-                    source: result[0].metadata.source
-                }
-            )
+            if(result.length > 0) {
+                relativeImages.push(
+                    {
+                        id: cont,
+                        desc: result[0].pageContent,
+                        source: result[0].metadata.source
+                    }
+                )
+            }
         }
 
         return relativeImages
+    }
+
+    async updateChatName({ id, question }) {
+        const chat = await this.get({ id })
+        if(chat.name === 'New chat') {
+            chat.name = question.slice(0,10)
+            await this.chatRepository.updateChatName({ id, name: chat.name })
+        }
+        return chat.name
     }
 }

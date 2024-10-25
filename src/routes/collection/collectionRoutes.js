@@ -44,7 +44,8 @@ export default function collectionRoutes(vCollectionService, rCollectionService,
         ///::create collection in both relational and vector dbs
         const rcollection = await rCollectionService.create({ 
           collectionName,
-          description
+          description,
+          userId: req.user.id
         }) 
 
         await vCollectionService.create({ id: rcollection.id}) 
@@ -66,7 +67,7 @@ export default function collectionRoutes(vCollectionService, rCollectionService,
 
   router.get('/', async (req, res) => {
     try {
-      const allCollections = await rCollectionService.getAll()
+      const allCollections = await rCollectionService.getAll({ userId: req.user.id })
       
       let payload = {
         collections: allCollections
@@ -78,6 +79,15 @@ export default function collectionRoutes(vCollectionService, rCollectionService,
       console.error('Error GET collection', error);
       res.status(500).json({ error: 'Internal server error' });
     }
+  })
+
+  router.delete('/', async (req, res) => {
+    const id = req.body.collection.id
+
+    await rCollectionService.delete({ id })
+    await vCollectionService.delete({ id })
+
+    res.status(200);
   })
 
   ///:: multer to handle uploaded files

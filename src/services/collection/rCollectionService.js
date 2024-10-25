@@ -7,13 +7,17 @@ export default class rCollectionService {
         this.collectionRepository = rcollectionRepository
     }
 
-    async create({ collectionName,  description}) {
-        const rcollection = await this.collectionRepository.create({ collectionName, description })
+    async create({ collectionName,  description, userId}) {
+        const rcollection = await this.collectionRepository.create({ collectionName, description, userId })
 
         return {
             id: rcollection.id,
             name: rcollection.name
         }
+    }
+
+    async delete({ id }) {
+        await this.collectionRepository.delete({ id })
     }
 
     async addFile({ collectionId, date, description , name }) {
@@ -27,8 +31,8 @@ export default class rCollectionService {
         }
     }
 
-    async getAll() {
-        return await this.collectionRepository.getAll()
+    async getAll({ userId }) {
+        return await this.collectionRepository.getAll({ userId })
     }
 
     async getAllFiles({ collectionId }) {

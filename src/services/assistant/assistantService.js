@@ -7,15 +7,16 @@ export default class AssistantService {
         this.assistantRepository = assistantRepository
     }
 
-    async getAll() {
-        return await this.assistantRepository.getAll()
+    async getAll({ userId }) {
+        return await this.assistantRepository.getAll({ userId })
     }
 
     async create({
         name,
-        description
+        description,
+        userId
     }) {
-        return await this.assistantRepository.create({ name, description}) 
+        return await this.assistantRepository.create({ name, description, userId}) 
     }
 
     async attachCollections({ 
@@ -32,8 +33,9 @@ export default class AssistantService {
     }
 
     async getAvailableCollections({ 
-        id 
+        id,
+        userId
     }) {
-        return await this.assistantRepository.getAvailableCollections({ id })
+        return await this.assistantRepository.getAvailableCollections({ id, userId })
     }
 }

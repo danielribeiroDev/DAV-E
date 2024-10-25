@@ -18,6 +18,10 @@ export default class vCollectionRepository {
         })
     }
 
+    async delete({ id }) {
+        ///
+    }
+
     async get({ id, filter = {} }) {
         const vcollection =  await this.provider.fromExistingCollection(
             this.embeddingHanldeObject,

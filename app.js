@@ -12,6 +12,16 @@ import Memcached from './src/services/memcached.js';
 import { Chroma } from '@langchain/community/vectorstores/chroma';
 import { OpenAIEmbeddings } from '@langchain/openai';
 
+///:: auth
+import { gAuthServiceInstance } from './src/factories/auth/authFactory.js';
+
+///:: middlewares
+import { verifyToken } from './src/middlewares/auth/verifyToken.js';
+
+///:: user
+import { gUserServiceInstance } from './src/factories/user/userFactory.js';
+import userRoutes from './src/routes/user/userRoutes.js';
+
 ///:: collection 
 import { gvCollectionServiceInstance } from './src/factories/collection/vCollectionFactory.js';
 import { grCollectionServiceInstance } from './src/factories/collection/rCollectionFactory.js';
@@ -58,6 +68,8 @@ async function startServer() {
     const memcached = new Memcached()
 
     ///:: generate service instances
+    const authService = gAuthServiceInstance()
+    const userService = gUserServiceInstance({ db, authService })
     const vcollectionService = gvCollectionServiceInstance(
       {
         provider: Chroma,
@@ -83,16 +95,20 @@ async function startServer() {
       res.sendFile(path.join(dirReference, 'public', 'html', 'index.html'));
     });
 
+    ///:: setup user routes
+    app.use('/users', userRoutes(userService, verifyToken))
+
     ///:: setup collection routes
-    app.use('/collections', collectionRoutes(vcollectionService, rcollectionService, loader))
+    app.use('/collections', verifyToken, collectionRoutes(vcollectionService, rcollectionService, loader))
 
     ///:: setup assistant routes
-    app.use('/assistants', assistantRoutes(rcollectionService, assistantService))
+    app.use('/assistants', verifyToken, assistantRoutes(rcollectionService, assistantService))
 
     ///:: setup chat routes
-    app.use('/chat', chatRoutes(chatService))
+    app.use('/chat', verifyToken, chatRoutes(chatService))
 
-    app.use('/file', fileRoutes())
+    ///:: setup file routes
+    app.use('/file', verifyToken, fileRoutes())
 
     ///:: init express server 
     app.listen(PORT, () => {

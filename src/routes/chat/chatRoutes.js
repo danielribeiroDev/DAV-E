@@ -13,7 +13,8 @@ export default function chatRoutes(chatService) {
         
         const chat = await chatService.create({ 
             id: assistantId, 
-            name: 'New chat'
+            name: 'New chat',
+            userId: req.user.id
         })
 
         let payload = {
@@ -32,7 +33,7 @@ export default function chatRoutes(chatService) {
   ///:: get all chats
   router.get('/', async (req, res) => {
     try {
-        const chats = await chatService.getAll()
+        const chats = await chatService.getAll({ userId: req.user.id })
 
         const payload = {
             chats

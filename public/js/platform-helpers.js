@@ -1,4 +1,4 @@
-const host = 'http://localhost:3000/'
+const host = 'http://177.71.145.74/'
 
 function fillTemplate(template, replacements, ) {
     let filledTemplate = template;
@@ -18,7 +18,8 @@ async function postPackage({ route, body }) {
         body: JSON.stringify(body),
         method: "POST",
         headers: {
-            'Content-Type': 'application/json' // Define o tipo de conteúdo como JSON
+            'Authorization': `${getAuthToken()}`,
+            'Content-Type': 'application/json', // Define o tipo de conteúdo como JSON
         },
     })
 
@@ -32,6 +33,7 @@ async function getImage({ route, body }) {
         body: JSON.stringify(body),
         method: "POST",
         headers: {
+            'Authorization': `${getAuthToken()}`,
             'Content-Type': 'application/json' // Define o tipo de conteúdo como JSON
         },
     })
@@ -45,6 +47,9 @@ async function getPackage(route) {
     showLoading()
     const response = await fetch(`${host}${route}`, {
         method: "GET",
+        headers: {
+            'Authorization': `${getAuthToken()}`
+        }
     })
 
     const payload = await response.json()
@@ -62,6 +67,9 @@ async function postFile(route, file, options) {
 
     const response = await fetch(`${host}${route}`, {
         method: 'POST',
+        headers: {
+            'Authorization': `${getAuthToken()}`
+        },
         body: formData
      });
     const payload = await response.json();
@@ -84,11 +92,11 @@ function formatUUID(uuid) {
 }
 
 function showLoading() {
-    document.getElementById('loading-overlay').classList.add('show');
+    document.getElementById('loading-overlay')?.classList.add('show');
 }
   
 function hideLoading() {
-    document.getElementById('loading-overlay').classList.remove('show');
+    document.getElementById('loading-overlay')?.classList.remove('show');
 }
   
 function setActiveItem({ e, classList, data, datasetParam, element, table }) {
@@ -105,4 +113,8 @@ function setActiveItem({ e, classList, data, datasetParam, element, table }) {
         collectionuuid = e.target.querySelector('[data-uuid]').dataset.uuid
     }
     document.querySelector(`[${data}]`).dataset[`${datasetParam}`] = collectionuuid
+}
+
+function getAuthToken() {
+    return localStorage.getItem('authToken')
 }

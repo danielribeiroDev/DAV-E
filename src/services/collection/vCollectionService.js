@@ -15,6 +15,10 @@ export default class vCollectionService {
         }
     }
 
+    async delete({ id }) {
+        await this.collectionRepository.delete({ id })
+    }
+
     async get({ id }) {
         return await this.collectionRepository.get({ id })
     }

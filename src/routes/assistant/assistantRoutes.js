@@ -14,7 +14,8 @@ export default function assistantRoutes(rCollectionService, assistantService) {
         
         const assistant = await assistantService.create({ 
             name: assistantName,
-            description
+            description,
+            userId: req.user.id
         }) 
 
         let payload = {
@@ -35,7 +36,7 @@ export default function assistantRoutes(rCollectionService, assistantService) {
   ///:: get assistants
   router.get('/', async (req, res) => {
     try {
-      const allAssistants = await assistantService.getAll()
+      const allAssistants = await assistantService.getAll({ userId: req.user.id })
       
       let payload = {
         assistants: allAssistants
@@ -93,7 +94,7 @@ export default function assistantRoutes(rCollectionService, assistantService) {
     try {
       const assistantId = req.params.id
       let collections = {}
-      collections.available = await assistantService.getAvailableCollections({ id: assistantId })
+      collections.available = await assistantService.getAvailableCollections({ id: assistantId, userId: req.user.id })
       let payload = {
         collections
       }

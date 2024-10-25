@@ -112,7 +112,7 @@ const createCollection = async (e, modalCollections) => {
         //     e.stopPropagation();
         //     console.log(`Item ${item.querySelector('h6').textContent} deletado!`);
         // })
-        const payload = await getPackage(`collections/files/${collectionuuid}`)
+        const payload = await getPackage(`collections/files/${document.querySelector('[data-refered-collection-uuid]').dataset.referedCollectionUuid}`)
         generateCollectionFilesUI(payload.files)
     })
 

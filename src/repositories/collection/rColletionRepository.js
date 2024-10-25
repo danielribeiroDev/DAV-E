@@ -6,25 +6,44 @@ export default class rCollectionRepository {
         this.table = 'collections'
     }
 
-    async getAll() {
-        const findAllQuery = `SELECT * FROM ${this.table}`
-        const result = await this.db.query(findAllQuery)
+    async getAll({ userId }) {
+        const findAllQuery = `
+        SELECT * FROM ${this.table}
+        WHERE user_id = $1
+        `
+        const result = await this.db.query(findAllQuery, [userId])
         return result.rows
     }
 
-    async create({ collectionName, description }) {
+    async create({ collectionName, description, userId }) {
         const createCollectionQuery = `
-            INSERT INTO ${this.table} (name, description)
-            VALUES ($1, $2)
+            INSERT INTO ${this.table} (name, description, user_id)
+            VALUES ($1, $2, $3)
             RETURNING *;
         `;
     
         try {
-            const result = await this.db.query(createCollectionQuery, [collectionName, description]);
-            return result.rows[0]; // Retorna o elemento recém-criado
+            const result = await this.db.query(createCollectionQuery, [collectionName, description, userId]);
+            return result.rows[0]; 
         } catch (error) {
             console.error('Erro ao criar a coleção:', error);
             throw error;
+        }
+    }
+
+    async delete({ id }) {
+        const deleteCollectionQuery = `
+        DELETE collection FROM ${this.table}
+        WHERE collection.id = $1
+        `
+
+        try {
+            const result = await this.db.query(deleteCollectionQuery, [id])
+            return result.rows[0]
+
+        } catch (error) {
+            console.error('Erro ao deletar coleção', error)
+            throw error
         }
     }
 
